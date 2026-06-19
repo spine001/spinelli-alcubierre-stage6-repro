@@ -1,0 +1,12 @@
+{
+  "num_cases": 2,
+  "N_values": [
+    161
+  ],
+  "median_bianchi": 0.07836609795777366,
+  "median_rho_error": 0.11058226298985216,
+  "median_beta_fit": -1.1514318185255188,
+  "median_action_over_fit": 0.9995224879406799,
+  "median_tensor_difference": 0.002065907596244073,
+  "time_utc": "2026-06-19T04:59:22+00:00"
+}
