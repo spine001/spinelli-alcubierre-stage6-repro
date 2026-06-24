@@ -1,25 +1,22 @@
 # Stage 7J Schwarzschild-Like Redesign Summary
 
-Stage 7J replaced the original clipped Schwarzschild-like pilot with a smooth bounded lapse-wall surrogate.
+Stage 7J replaced the original clipped Schwarzschild-like pilot geometry with a bounded smooth-lapse horizon-wall surrogate.
 
 Cases tested:
 
 - geometry: schwarzschild_like
-- N: 61
-- mass: 1.25
-- width: 0.75
-- eps/lapse floor: 0.35
-- score masks: localized, schwarz_center, schwarz_edge, schwarz_exterior, schwarz_interior, all
+- N: 71
+- redesign: smooth_bounded_lapse_wall
+- masks: all, localized, schwarz_center, schwarz_edge, schwarz_exterior, schwarz_interior
 
 Main findings:
 
-1. The smooth bounded redesign substantially improves numerical behavior relative to the original clipped surrogate.
-2. Bianchi residuals are small enough to treat the run as numerically meaningful.
-3. The best signal appears in the schwarz_exterior mask.
-4. The horizon center and interior masks remain poorly conditioned.
-5. The Schwarzschild-like case is not yet a clean validation case like Gaussian or FRW.
-6. The result suggests that near-horizon radial geometries need specialized exterior/interior treatment.
+1. The original Schwarzschild-like failure was partly caused by the clipped near-singular surrogate.
+2. The smooth bounded-lapse redesign produced a meaningful partial signal on the exterior side of the horizon-like wall.
+3. The schwarz_exterior mask gave the best result: lowest tensor difference, closest Action/Fit ratio, and small Bianchi residual.
+4. The center and interior masks remain poor.
+5. Near-horizon geometries require physically meaningful exterior/interior treatment and should not be interpreted with a single broad mask.
 
 Interpretation:
 
-The previous Schwarzschild-like failure was partly due to the clipped coordinate surrogate. The redesigned bounded lapse-wall model produces a partial exterior-side signal, but near-horizon geometries remain more difficult than Alcubierre, Gaussian, FRW, or low-amplitude weak-GW tests.
+The Schwarzschild-like geometry is not a clean validation case yet, but it is no longer simply unreliable. The exterior-side smooth-lapse result suggests that the action-derived correction tensor may capture part of the near-horizon radial-gradient structure, while the interior and center regions remain poorly conditioned under the current pilot model.
