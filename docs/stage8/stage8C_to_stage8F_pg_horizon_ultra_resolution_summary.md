@@ -30,7 +30,3 @@ Interpretation:
 The PG-horizon exterior branch is now a high-confidence near-horizon validation branch of the Spinelli Framework. The earlier weak Schwarzschild-like Stage 7 result is best interpreted as a coordinate/model artifact. Once a horizon-regular radial-flow representation is used, the action-derived correction tensor remains stable, predictive, and resolution-robust.
 
 The fitted beta coefficient remains negative and bounded but not universal. The stronger conclusion is that the action-derived tensor is the robust object, while beta behaves as an effective geometry-dependent scalar projection.
-
-Publication-safe claim:
-
-The Spinelli Framework defines an action-derived correction tensor that remains residual-predictive across a horizon-regular near-horizon PG-like chart through N151. The near-horizon result supports the broader Stage 6–8 conclusion that the correction tensor is geometrically robust, while the fitted beta coefficient is geometry- and scale-dependent rather than universal.
