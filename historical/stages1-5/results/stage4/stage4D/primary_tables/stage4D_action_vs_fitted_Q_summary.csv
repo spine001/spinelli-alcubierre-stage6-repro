@@ -1,0 +1,2 @@
+DIM,N,lambda_fit,beta_fit,beta_action,relative_tensor_difference_action_vs_fit,relative_tensor_difference_percent,fitted_normalized_residual,action_normalized_residual,residual_ratio_action_over_fit,residual_penalty_percent
+4,61,0.015789560482987477,-1.0306645653775017,-1.0,0.00027417084425789484,0.027417084425789485,0.01661441080787219,0.01661478737676192,1.000022665196743,0.002266519674298806

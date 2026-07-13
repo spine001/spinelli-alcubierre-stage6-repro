@@ -1,0 +1,2 @@
+successful_cases,failed_cases,N,DIM,beta_fit_mean,beta_fit_std,abs_beta_fit_plus_1_median,action_over_fit_median,relative_tensor_difference_median,action_fraction_median,eta_needed_median
+48,0,31,4,-0.705173577587466,0.33359577470056573,0.1845521953996655,1.0001870644062365,0.0022662516440255503,80.55501685795608,0.0127496603426535

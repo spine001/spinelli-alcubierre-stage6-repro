@@ -1,0 +1,13 @@
+{
+  "successful_cases": 48,
+  "failed_cases": 0,
+  "N": 31,
+  "DIM": 4,
+  "beta_fit_mean": -0.705173577587466,
+  "beta_fit_std": 0.33359577470056573,
+  "abs_beta_fit_plus_1_median": 0.1845521953996655,
+  "action_over_fit_median": 1.0001870644062365,
+  "relative_tensor_difference_median": 0.0022662516440255503,
+  "action_fraction_median": 80.55501685795608,
+  "eta_needed_median": 0.0127496603426535
+}

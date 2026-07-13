@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regularizing Alcubierre-Type Warp Geometry with Quantized Proper Time</title>
+  <meta name="description" content="A technical note arguing that Alcubierre-type warp-drive pathologies may be reframed as concrete, numerically tractable tests of Spinelli's discrete proper-time framework — inviting physicists to simulate, derive, and potentially falsify the framework under extreme relativistic conditions." />
+  <meta name="author" content="Julio C. Spinelli" />
+  <style>
+    :root {
+      --ink: #202124;
+      --muted: #5f6368;
+      --paper: #ffffff;
+      --bg: #f7f8fa;
+      --line: #dadce0;
+      --blue: #1558d6;
+      --blue-soft: #eef4ff;
+      --amber: #b26a00;
+      --amber-soft: #fff7e0;
+      --green: #0b6f43;
+      --green-soft: #eaf7f0;
+      --red: #9b1c1c;
+      --red-soft: #fff0f0;
+      --purple: #5b21b6;
+      --purple-soft: #f5f3ff;
+      --code: #f1f3f4;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.68;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 72px;
+    }
+
+    article {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: 0 10px 28px rgba(60, 64, 67, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      line-height: 1.22;
+      color: #111;
+      margin-top: 1.55em;
+      margin-bottom: 0.55em;
+    }
+
+    h1 {
+      font-size: clamp(2.0rem, 4.2vw, 3.15rem);
+      margin-top: 0;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 2.7vw, 2.05rem);
+      border-top: 1px solid var(--line);
+      padding-top: 1.05em;
+    }
+
+    h3 { font-size: 1.25rem; }
+
+    p { margin: 0.72em 0; }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-top: -0.25em;
+      margin-bottom: 1.15em;
+    }
+
+    .byline {
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.4em;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 26px;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 0.88rem;
+      color: #3c4043;
+      background: #fafafa;
+    }
+
+    .callout {
+      border-left: 5px solid var(--blue);
+      background: var(--blue-soft);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+
+    .callout h3,
+    .warning h3,
+    .greenbox h3,
+    .redbox h3,
+    .purplebox h3 {
+      margin-top: 0;
+      border: none;
+    }
+
+    .warning {
+      border-left: 5px solid var(--amber);
+      background: var(--amber-soft);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+
+    .greenbox {
+      border-left: 5px solid var(--green);
+      background: var(--green-soft);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+
+    .redbox {
+      border-left: 5px solid var(--red);
+      background: var(--red-soft);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+
+    .purplebox {
+      border-left: 5px solid var(--purple);
+      background: var(--purple-soft);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 22px 0;
+    }
+
+    .equation {
+      overflow-x: auto;
+      text-align: center;
+      background: #fbfbfb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 12px;
+      margin: 20px 0;
+      font-size: 1.08rem;
+    }
+
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      background: var(--code);
+      border-radius: 6px;
+    }
+
+    code { padding: 1px 5px; }
+
+    pre {
+      padding: 14px;
+      overflow-x: auto;
+      border-left: 4px solid var(--blue);
+      white-space: pre-wrap;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: #fff;
+      font-size: 0.98rem;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 13px 14px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f3f4;
+      text-align: left;
+    }
+
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.45em 0; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 18px 0;
+    }
+
+    .small { font-size: 0.94rem; color: var(--muted); }
+
+    .references li { margin-bottom: 12px; }
+
+    .footer-note {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .open-problem {
+      counter-reset: none;
+    }
+
+    .open-problem-item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      background: #fafcff;
+      position: relative;
+      padding-left: 58px;
+    }
+
+    .open-problem-item .op-number {
+      position: absolute;
+      left: 14px;
+      top: 16px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+    }
+
+    .open-problem-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 720px) {
+      article { padding: 24px 18px; border-radius: 0; border-left: none; border-right: none; }
+      .page { padding: 0 0 48px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <main class="page">
+    <article>
+      <h1>Regularizing Alcubierre-Type Warp Geometry with Quantized Proper Time</h1>
+      <p class="subtitle">Three unsolved divergences in the Alcubierre metric become finite, computable, and falsifiable under discrete proper-time dynamics — an open invitation for calculation.</p>
+      <p class="byline">Julio C. Spinelli &mdash; Framework Extension / Technical Note</p>
+
+      <div class="badge-row">
+        <span class="badge">Discrete proper time</span>
+        <span class="badge">Alcubierre metric</span>
+        <span class="badge">Warp-drive pathologies</span>
+        <span class="badge">Quantum backreaction</span>
+        <span class="badge">Planck-scale regularization</span>
+        <span class="badge">Numerical falsifiability</span>
+        <span class="badge">Open research problems</span>
+      </div>
+
+      <div class="callout">
+        <h3>What this note is — and what it is not</h3>
+        <p>This note does <strong>not</strong> claim that an Alcubierre drive is technologically realizable. Its purpose is sharper: the Alcubierre metric concentrates several continuum divergences in one solvable geometry, making it an ideal stress test for the Spinelli discrete proper-time framework. The central claim is that quantized proper time converts those divergences into <em>finite, computable quantities</em> — and this claim can be confirmed or refuted by explicit calculation. This note is an invitation to those calculations.</p>
+      </div>
+
+      <h2>Abstract</h2>
+      <p>The Alcubierre warp metric permits effective superluminal displacement within classical general relativity at a steep theoretical price: macroscopic negative energy density, bubble-wall gradients that diverge in the thin-wall limit, trans-Planckian blueshift near the forward horizon, and quantum backreaction instabilities that are formally divergent in the continuum. These pathologies have blocked the transition from mathematical curiosity to physical research programme for thirty years.</p>
+      <p>This note argues that all four pathologies are precisely the kind of problem that a discrete proper-time theory is structured to address. If physical evolution is indexed by a minimum proper-time step \(t_{\min}\), then arbitrarily thin wall gradients are Nyquist-limited, trans-Planckian blueshift is capped, and the effective field equations acquire finite correction tensors \(T^{(q)}_{\mu\nu}\) and \(Q_{\mu\nu}\) whose sign, magnitude, and conservation behavior determine whether the framework succeeds or fails. The Alcubierre geometry is therefore a high-value benchmark: it provides four distinct, calculable falsifiability tests for the Spinelli framework, independent of any propulsion application.</p>
+
+      <div class="greenbox">
+        <h3>The central claim</h3>
+        <p>Discrete proper-time dynamics does not <em>automatically</em> solve the warp-drive problem. The stronger, more honest, and more useful claim is this: <strong>the Alcubierre pathologies are calculable within the Spinelli framework, and the calculations will either confirm the framework as a viable regulator of extreme relativistic divergences or falsify it in a scientifically precise way.</strong> Either outcome is valuable. Both outcomes require someone to do the math.</p>
+      </div>
+
+      <h2>Plain-language summary — English</h2>
+      <p>The Alcubierre drive is often dismissed as science fiction. Its real scientific value is different: it is one of the few exact solutions in general relativity that concentrates four distinct theoretical breakdowns — exotic energy, wall-gradient divergence, horizon instability, and causal pathology — in a single, analytically tractable geometry. For thirty years, these breakdowns have been identified but not resolved, because the tools available in continuum field theory cannot regularize them without ad hoc cutoffs.</p>
+      <p>The Spinelli discrete proper-time papers propose a structural alternative: physical evolution does not proceed on an arbitrarily divisible continuum but on a sequence of minimum proper-time steps. If this is correct, the four Alcubierre divergences are not fundamental — they are artifacts of assuming the continuum holds at scales it does not. The modified field equations of the framework contain correction tensors whose properties, near steep warp-wall gradients and horizons, are calculable. Whether those corrections have the right sign and magnitude to regularize the divergences, conserve energy-momentum, and stabilize the geometry is an open question that can be answered by explicit computation on modest hardware. This note identifies the calculations. It invites physicists who work on analogue gravity, semiclassical relativity, quantum-gravity phenomenology, or numerical GR to attempt them.</p>
+
+      <h2>Resumen en lenguaje simple — Español</h2>
+      <p>El motor de curvatura de Alcubierre suele descartarse como ciencia ficción. Su valor científico real es diferente: es una de las pocas soluciones exactas en relatividad general que concentra cuatro quiebres teóricos distintos — energía exótica, divergencia del gradiente de la pared, inestabilidad del horizonte y patología causal — en una sola geometría analíticamente tratable. Durante treinta años, estos quiebres han sido identificados pero no resueltos, porque las herramientas de la teoría de campos continua no pueden regularizarlos sin cortes ad hoc.</p>
+      <p>Los trabajos de Spinelli sobre tiempo propio discreto proponen una alternativa estructural: la evolución física no transcurre sobre un continuo divisible de forma arbitraria, sino sobre una secuencia de pasos mínimos de tiempo propio. Si esto es correcto, las cuatro divergencias de Alcubierre no son fundamentales; son artefactos de asumir que el continuo se sostiene en escalas donde no lo hace. Las ecuaciones de campo modificadas del marco contienen tensores correctivos cuyas propiedades, cerca de gradientes pronunciados de la pared de curvatura y de horizontes, son calculables. Si esas correcciones tienen el signo y la magnitud correctos para regularizar las divergencias, conservar el momento-energía y estabilizar la geometría es una pregunta abierta que puede responderse mediante cálculo explícito en hardware modesto. Esta nota identifica los cálculos. Es una invitación a físicos que trabajen en gravedad análoga, relatividad semiclásica, fenomenología de gravedad cuántica o RG numérica a intentarlos.</p>
+
+      <h2>1. The four unsolved bottlenecks</h2>
+      <p>The classical Alcubierre metric describes a spacetime distortion in which a compact region is transported by expansion behind the bubble and contraction ahead of it. A standard form of the line element is:</p>
+      <div class="equation">\[
+        ds^2 = -c^2 dt^2 + \left[dx - v_s(t) f(r_s) dt\right]^2 + dy^2 + dz^2 .
+      \]</div>
+
+      <p>For suitable shape functions \(f(r_s)\), the bubble can carry an effective global velocity \(v_s(t) > c\) relative to distant observers. The mathematical freedom is genuine, but the required stress-energy is pathological. For Eulerian observers, the energy density at the warp wall is negative and scales with bubble velocity and wall-gradient:</p>
+      <div class="equation">\[
+        T_{00} \sim -\frac{c^4}{8\pi G}\,\frac{v_s^2 r_s^2}{4 r^2 c^2}\left(\frac{df}{dr}\right)^2 .
+      \]</div>
+
+      <p>This produces four technical bottlenecks that have defined the problem since Alcubierre's 1994 paper. Each is a divergence in the continuum theory. Each is a potential target for discrete proper-time regularization:</p>
+
+      <div class="two-col">
+        <div class="warning">
+          <h3>Bottleneck 1 — Exotic energy</h3>
+          <p>The required stress-energy is negative, large, and structured. It is not a small perturbative correction. Van Den Broeck (1999) and Lobo &amp; Visser (2004) reduced the required magnitude significantly, but did not eliminate the negative-energy requirement. No known quantum state is confirmed to supply macroscopic negative energy of this type.</p>
+        </div>
+        <div class="warning">
+          <h3>Bottleneck 2 — Thin-wall divergence</h3>
+          <p>Sharpening the bubble boundary to maximize efficiency drives wall gradients \(\partial f/\partial r_s\) toward arbitrarily large values. In the continuum, there is no physical lower bound on wall thickness. Physically, this limit is unresolvable and likely unphysical.</p>
+        </div>
+        <div class="warning">
+          <h3>Bottleneck 3 — Horizon instability</h3>
+          <p>Superluminal bubbles develop horizons for comoving observers. Quantum fields across this horizon undergo trans-Planckian blueshift in the continuum limit. Hiscock (1997) and Finazzi et al. (2009) showed the semiclassical stress-energy tensor diverges there, making the configuration quantum-mechanically unstable.</p>
+        </div>
+        <div class="warning">
+          <h3>Bottleneck 4 — Chronology violation</h3>
+          <p>Everett (1996) showed that two warp bubbles in suitable relative configuration permit closed timelike curves. Standard general relativity has no internal mechanism to prevent this. Hawking's chronology protection conjecture remains unproven.</p>
+        </div>
+      </div>
+
+      <p>All four bottlenecks share a common structure: they arise because continuum field theory supplies no minimum length or time scale. A discrete proper-time framework supplies exactly that structure.</p>
+
+      <h2>2. The Spinelli discrete proper-time framework</h2>
+      <p>The Spinelli framework applies a minimal modification to relativistic dynamics: physical evolution is indexed along proper time by a discrete sequence of steps rather than an arbitrarily divisible continuum parameter. The system advances by integer-indexed proper-time steps:</p>
+      <div class="equation">\[
+        \tau_n = n\,t_{\min}, \qquad n \in \mathbb{N} .
+      \]</div>
+
+      <p>Here \(t_{\min}\) is a fundamental minimum proper-time interval, naturally associated with the Planck regime (\(t_{\min} \sim t_P \approx 5.4 \times 10^{-44}\) s), though its precise value is a parameter of the theory. The continuum limit \(t_{\min} \to 0\) recovers standard general relativity. At finite \(t_{\min}\), the finite-difference structure generates correction terms in the field equations.</p>
+
+      <h3>Modified field equations</h3>
+      <p>Finite proper-time updating of matter and geometry introduces effective correction tensors into the Einstein equations:</p>
+      <div class="equation">\[
+        R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R
+        = \frac{8\pi G}{c^4}\left(T_{\mu\nu} + T^{(q)}_{\mu\nu} + Q_{\mu\nu}\right) ,
+      \]</div>
+      <p>where:</p>
+      <ul>
+        <li>\(T^{(q)}_{\mu\nu}\): effective quantum matter correction tensor from finite-difference proper-time updates of matter fields.</li>
+        <li>\(Q_{\mu\nu}\): effective metric fluctuation or geometric correction tensor from finite-difference updates of the metric itself.</li>
+      </ul>
+
+      <p>Both correction tensors vanish in the continuum limit — ensuring consistency with classical general relativity — but remain finite and computable at finite \(t_{\min}\):</p>
+      <div class="equation">\[
+        \lim_{t_{\min}\to 0}\left(T^{(q)}_{\mu\nu}+Q_{\mu\nu}\right)=0 .
+      \]</div>
+
+      <p>The key observation is that these corrections grow large precisely in the regimes where continuum derivatives become large — exactly the regimes where all four Alcubierre bottlenecks arise.</p>
+
+      <h3>Schematic correction structure</h3>
+      <p>For a scalar toy source, the leading finite-difference correction to the energy density takes the form:</p>
+      <div class="equation">\[
+        T^{(q)}_{00} \sim \frac{t_{\min}^{2}}{24}
+        \left(\frac{d^2\phi}{d\tau^2}\right)^2 + \cdots
+      \]</div>
+      <p>The \(t_{\min}^2\) coefficient ensures the correction vanishes for smooth fields in the continuum limit. Near a Planck-resolved warp wall, higher proper-time derivatives can scale as inverse powers of \(t_{\min}\), causing the product to remain finite or grow large in the high-frequency regime. This is the mechanism by which discrete proper time can regulate the thin-wall and horizon divergences. Whether it does so with the correct sign and magnitude for the full Alcubierre geometry is the central open question.</p>
+
+      <h2>3. Framework status: what is established, what is open</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Alcubierre bottleneck</th>
+            <th>Discrete proper-time mechanism</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Thin-wall divergence</strong><br><small>Wall gradients \(\partial f/\partial r_s\) unbounded in continuum limit</small></td>
+            <td><strong>Nyquist-like frequency saturation:</strong> minimum proper-time step bounds physically resolvable update frequency. Translated into local proper wall-crossing time, this may impose a lower bound on physically meaningful wall thickness — possibly \(r_{\min} \sim \sqrt{r_s \ell_P}\).</td>
+            <td style="background:#eaf7f0;"><strong>Promising regulator.</strong> Works as a structural high-frequency cutoff. A coordinate-invariant derivation of the physical wall thickness bound is required. The candidate scaling should be treated as model-dependent until derived from first principles.</td>
+          </tr>
+          <tr>
+            <td><strong>Horizon instability</strong><br><small>Semiclassical stress-energy diverges at the forward horizon (Hiscock 1997, Finazzi et al. 2009)</small></td>
+            <td><strong>Trans-Planckian cutoff:</strong> finite proper-time resolution caps the maximum physically meaningful blueshift frequency. Divergent mode sums become finite computable series. The correction is numerically testable via discrete field-mode integration.</td>
+            <td style="background:#eaf7f0;"><strong>Strongest implication.</strong> This is the most direct application of the framework. It targets a well-characterized continuum divergence, does not require new physics beyond the \(t_{\min}\) hypothesis, and is numerically accessible with modest computational resources.</td>
+          </tr>
+          <tr>
+            <td><strong>Exotic energy requirement</strong><br><small>Large negative \(T_{00}\) required throughout the warp-wall region</small></td>
+            <td><strong>Correction-sector contribution:</strong> \(T^{(q)}_{\mu\nu}\) and \(Q_{\mu\nu}\) may contribute compensating finite terms near steep warp-wall gradients. The sign is not determined by the framework's structure alone.</td>
+            <td style="background:#fff7e0;"><strong>Open question — primary falsifiability target.</strong> The decisive calculation is the sign, magnitude, conservation behavior, and dynamical stability of the correction tensors in the explicit warp-wall geometry. This is where the framework can be confirmed or falsified.</td>
+          </tr>
+          <tr>
+            <td><strong>Chronology violation</strong><br><small>Two-bubble configurations can permit closed timelike curves (Everett 1996)</small></td>
+            <td><strong>Integer update ordering:</strong> the discrete index \(n \in \mathbb{N}\) prevents infinitesimal proper-time self-reference within the local update rule. Local causal loops are excluded structurally.</td>
+            <td style="background:#fff7e0;"><strong>Partial result.</strong> Local integer ordering prevents update-level loops. Excluding macroscopic closed timelike curves in the emergent geometry requires a separate global causality theorem. This is an open mathematical problem for the framework.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Open research problems — an invitation to calculate</h2>
+      <p>The following problems are well-posed, numerically tractable, and directly testable within the Spinelli framework. They require no new experimental apparatus. Each can be initiated on desktop or small-cluster hardware and each yields a clear positive or negative result for the framework.</p>
+
+      <div class="open-problem">
+        <div class="open-problem-item">
+          <span class="op-number">P1</span>
+          <strong>Sign and magnitude of \(T^{(q)}_{00}\) in the warp-wall geometry</strong>
+          Compute the leading discrete proper-time correction to the energy density across the Alcubierre bubble wall for a massive scalar field. Determine whether \(T^{(q)}_{00}\) is positive (potentially offsetting the classical negative energy), negative (worsening the exotic energy requirement), or sign-oscillating across the wall profile. This is the primary falsifiability calculation.
+        </div>
+        <div class="open-problem-item">
+          <span class="op-number">P2</span>
+          <strong>Conservation of the modified source sector</strong>
+          Numerically verify whether \(\nabla^{\mu}(T_{\mu\nu} + T^{(q)}_{\mu\nu} + Q_{\mu\nu}) = 0\) holds stably in the warp-wall background under finite differences. A failure of conservation would rule out the framework as a physical regulator, independent of the sign result.
+        </div>
+        <div class="open-problem-item">
+          <span class="op-number">P3</span>
+          <strong>Horizon blueshift regularization</strong>
+          Model field modes near the forward horizon of a superluminal Alcubierre bubble under discrete proper-time dynamics. Determine whether the trans-Planckian mode sum converges to a finite value and whether that value matches the Hiscock–Finazzi divergence profile in the continuum limit. This problem has a clear numerical signature.
+        </div>
+        <div class="open-problem-item">
+          <span class="op-number">P4</span>
+          <strong>Coordinate-invariant wall-thickness bound</strong>
+          Derive, from the finite-difference update structure, a coordinate-independent lower bound on the physically resolvable bubble-wall thickness. Identify whether any bound takes the form \(r_{\min} \sim \sqrt{r_s \ell_P}\) or differs from this scaling. Compare with analogous results in polymer quantization and loop quantum cosmology.
+        </div>
+        <div class="open-problem-item">
+          <span class="op-number">P5</span>
+          <strong>Stability of the regularized wall</strong>
+          Perturb the regularized bubble wall and integrate the linearized equations with discrete proper-time correction terms active. Determine whether perturbations damp, oscillate stably, or produce runaway modes. A runaway result would identify the regime in which the framework's self-consistency breaks down.
+        </div>
+        <div class="open-problem-item">
+          <span class="op-number">P6</span>
+          <strong>Global causality theorem for the emergent geometry</strong>
+          Prove or disprove that the integer-indexed update structure of the discrete proper-time framework excludes macroscopic closed timelike curves in the emergent spacetime, beyond the local exclusion provided by the discrete update ordering. This is a mathematical problem in Lorentzian geometry and causal set theory.
+        </div>
+      </div>
+
+      <div class="purplebox">
+        <h3>Entry points for different research communities</h3>
+        <p><strong>Numerical relativity / analogue gravity:</strong> P1, P2, P3, and P5 are numerical problems that can be initiated in 1+1D with existing finite-difference GR codes, modified to implement the discrete proper-time update kernel.</p>
+        <p><strong>Semiclassical GR / quantum field theory in curved spacetime:</strong> P3 directly extends the Hiscock–Finazzi horizon instability analysis to the discrete-time setting. The framework predicts a finite, calculable modification to the divergent mode spectrum.</p>
+        <p><strong>Quantum gravity phenomenology:</strong> P4 connects the framework to polymer quantization and LQC wall-thickness scalings. A comparison of regularization mechanisms across frameworks would clarify whether discrete proper time reproduces, extends, or contradicts existing results.</p>
+        <p><strong>Mathematical physics / causal set theory:</strong> P6 is a global causality problem with a precise statement and a clear positive or negative resolution.</p>
+      </div>
+
+      <h2>5. Analytical consistency and falsifiability</h2>
+      <p>The framework's analytical self-consistency requires that the modified source sector remain conserved throughout the calculation:</p>
+      <div class="equation">\[
+        \nabla^{\mu}\left(T_{\mu\nu}+T^{(q)}_{\mu\nu}+Q_{\mu\nu}\right)=0 .
+      \]</div>
+
+      <p>This conservation requirement is not guaranteed by the structure of the discrete update alone — it must be verified in each background geometry. The Alcubierre metric provides a non-trivial background in which this verification is both necessary and numerically tractable. Discrete Einstein-field-equation analogues can be implemented as finite-difference integration kernels, and the resulting conservation residuals can be tested on GPU- or FPGA-accelerated desktop hardware before migration to high-performance computing clusters.</p>
+
+      <div class="redbox">
+        <h3>Falsifiability conditions — the framework fails if any of the following hold</h3>
+        <ul style="margin:0; padding-left:1.2em;">
+          <li>The correction tensors \(T^{(q)}_{\mu\nu}\) and \(Q_{\mu\nu}\) fail to conserve locally in the warp-wall geometry.</li>
+          <li>The corrections amplify rather than regularize the horizon blueshift instability.</li>
+          <li>The sign of \(T^{(q)}_{00}\) at the warp wall worsens the negative-energy requirement rather than offsetting it.</li>
+          <li>The required correction magnitude violates the assumptions under which the discrete proper-time expansion is valid — i.e., the framework is only self-consistent in a regime where its corrections are negligible.</li>
+          <li>Bubble-wall perturbations produce runaway modes that the correction terms cannot damp.</li>
+        </ul>
+        <p style="margin-top:10px;">A framework that cannot pass these tests in the Alcubierre geometry should not be expected to regularize any other extreme-curvature regime. The Alcubierre metric is a useful elimination filter.</p>
+      </div>
+
+      <h2>6. Simulation roadmap</h2>
+      <p>The following sequence provides a minimal viable path from the framework's analytical structure to numerically falsifiable results:</p>
+      <ol>
+        <li><strong>Dimensional reduction:</strong> Begin with a \(1+1\)D moving wall profile \(f(r_s)\) and implement continuum derivatives as finite proper-time update kernels. Validate against known continuum results in the limit \(t_{\min} \to 0\).</li>
+        <li><strong>Stress-energy extraction (P1):</strong> Quantitatively isolate the sign and magnitude of \(T^{(q)}_{00}\), \(T^{(q)}_{ij}\), and \(Q_{\mu\nu}\) across varying wall thicknesses and bubble velocities.</li>
+        <li><strong>Conservation check (P2):</strong> Numerically verify that \(\nabla^{\mu}(T_{\mu\nu}+T^{(q)}_{\mu\nu}+Q_{\mu\nu})=0\) holds stably under finite differences. Report the conservation residual as a function of \(t_{\min}\).</li>
+        <li><strong>Backreaction test (P3):</strong> Model horizon-adjacent field modes and determine whether discrete proper-time regularization caps trans-Planckian growth. Compare the regulated stress-energy profile with the Finazzi et al. (2009) divergence.</li>
+        <li><strong>Stability analysis (P5):</strong> Perturb the regularized bubble wall and measure whether correction terms damp perturbations or produce runaway modes.</li>
+        <li><strong>Coordinate-invariant reconstruction (P4):</strong> Translate update-step regularization into invariant physical quantities: proper wall thickness, curvature scalars, and integrated energy conditions. Report whether a universal scaling emerges.</li>
+      </ol>
+
+      <h2>7. Why the Alcubierre geometry is the right benchmark</h2>
+      <p>The Alcubierre metric earns its place as a stress test because it provides four simultaneous failure modes of continuum field theory in a single, analytically controlled geometry. Most extreme-curvature problems — black hole singularities, big bang cosmology, trans-Planckian inflation — involve either inaccessible initial conditions or spherical symmetry that obscures directional structure. The Alcubierre bubble wall is directional, asymmetric, and parameterized by continuously tunable quantities (\(v_s\), \(r_s\), wall-sharpness) that allow the divergence strength to be dialed up or down. This makes it unusually well-suited for stress-testing a regularization mechanism.</p>
+      <p>A discrete proper-time theory that passes the Alcubierre stress test — regularizing all four bottlenecks, conserving energy-momentum, and producing stable perturbative dynamics — has demonstrated a genuine claim to be a regulator of extreme relativistic divergences. A theory that fails one or more of the five falsifiability conditions listed above has been usefully eliminated, or at minimum constrained to a narrower regime of applicability. Either outcome advances the field.</p>
+      <p>The claim made here is not that Alcubierre-type propulsion is on any near-term engineering horizon. The claim is that the unsolved physics is tractable with existing tools, that the Spinelli framework provides a specific, non-trivial structure to test against that physics, and that the community has not yet done those tests. This note is an invitation to do them.</p>
+
+      <h2>8. Conclusion</h2>
+      <p>The Alcubierre metric has been a theoretical curiosity for thirty years largely because its divergences were catalogued but not resolved. The Spinelli discrete proper-time framework offers a structural mechanism — finite proper-time update steps that impose a physical high-frequency cutoff — whose consequences in the warp-wall geometry are calculable and falsifiable. The four bottlenecks that define the Alcubierre problem correspond to four distinct tests of the framework, each with a clear positive or negative numerical signature.</p>
+      <p>The decisive calculations are not exotic. They require implementing a discrete proper-time update kernel in a finite-difference GR code, computing correction tensor components in the warp-wall background, testing conservation, and measuring the horizon blueshift spectrum. These are calculations that groups working in numerical relativity, semiclassical gravity, or quantum-gravity phenomenology are equipped to perform. The open problems are stated above. The invitation is open.</p>
+
+      <h2>References</h2>
+      <ol class="references">
+        <li>M. Alcubierre, "The warp drive: hyper-fast travel within general relativity," <em>Classical and Quantum Gravity</em>, vol. 11, no. 5, L73&ndash;L77, 1994. DOI: <a href="https://doi.org/10.1088/0264-9381/11/5/001">10.1088/0264-9381/11/5/001</a>.</li>
+        <li>W. A. Hiscock, "Quantum effects in the Alcubierre warp-drive spacetime," <em>Classical and Quantum Gravity</em>, vol. 14, no. 11, L183&ndash;L188, 1997. DOI: <a href="https://doi.org/10.1088/0264-9381/14/11/002">10.1088/0264-9381/14/11/002</a>.</li>
+        <li>A. E. Everett, "Warp drive and causality," <em>Physical Review D</em>, vol. 53, no. 12, pp. 7365&ndash;7368, 1996. DOI: <a href="https://doi.org/10.1103/PhysRevD.53.7365">10.1103/PhysRevD.53.7365</a>.</li>
+        <li>S. Finazzi, S. Liberati, and C. Barceló, "Semiclassical instability of dynamical warp drives," <em>Physical Review D</em>, vol. 79, no. 12, 124017, 2009. DOI: <a href="https://doi.org/10.1103/PhysRevD.79.124017">10.1103/PhysRevD.79.124017</a>.</li>
+        <li>F. S. N. Lobo and M. Visser, "Fundamental limitations on warp drive spacetimes," <em>Classical and Quantum Gravity</em>, vol. 21, no. 24, pp. 5871&ndash;5892, 2004. DOI: <a href="https://doi.org/10.1088/0264-9381/21/24/011">10.1088/0264-9381/21/24/011</a>.</li>
+        <li>J. C. Spinelli, "Finite Lorentz Factor from Discrete Proper-Time Quantization: Modified Dispersion Relation and Phenomenology," engrXiv preprint, 2025.</li>
+        <li>J. C. Spinelli, "Quantum Fields on Discrete Proper Time: Vacuum Stress-Energy Corrections, Non-Equilibrium Phenomenology, and Experimental Targets," engrXiv preprint, 2025.</li>
+        <li>J. C. Spinelli, "Quantized Proper Time and Gravity as Resynchronization: A Minimal Discrete-Time Framework for Singularities and Quantum Corrections," engrXiv preprint, 2025.</li>
+      </ol>
+
+      <div class="footer-note">
+        <p>This technical note is intended as a research invitation. Correspondence on any of the six open problems, or on related analogue-gravity or quantum-gravity calculations, is welcome. The Spinelli proper-time preprints are available on engrXiv.</p>
+      </div>
+
+    </article>
+  </main>
+</body>
+</html>
