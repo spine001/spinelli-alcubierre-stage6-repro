@@ -60,3 +60,14 @@ Then use the scripts in run_scripts/, or call the Python scripts directly.
 ## Repository link for article
 
 https://github.com/spine001/spinelli-alcubierre-stage6-repro
+
+<!-- N301_V1_STATUS_START -->
+## Current validation status — 2026-07-15
+
+Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` completed and passed the rho-aware v2 gate.
+The published summary is in `results/published/stage6E_N301_v1_sigma4_R3/`.
+The aggregate rho diagnostic passes; one extreme-rho tile remains queued for local
+ring-neighborhood review. Historical Stages 1–5 are preserved under `historical/stages1-5/`.
+
+See `docs/PROJECT_STATUS.md` and the current self-contained master HTML in `article/`.
+<!-- N301_V1_STATUS_END -->
