@@ -64,10 +64,14 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-15
 
-Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` completed and passed the rho-aware v2 gate.
-The published summary is in `results/published/stage6E_N301_v1_sigma4_R3/`.
-The aggregate rho diagnostic passes; one extreme-rho tile remains queued for local
-ring-neighborhood review. Historical Stages 1–5 are preserved under `historical/stages1-5/`.
+Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` passed the rho-aware v2 gate.
+The isolated extreme-rho tile was subsequently classified by the local ring-neighborhood
+diagnostic as `LIKELY_BOUNDARY_OR_HALO_ARTIFACT`. Detailed TXT, CSV, and JSON diagnostic
+records are published beside the N301 summary.
 
-See `docs/PROJECT_STATUS.md` and the current self-contained master HTML in `article/`.
+Historical Stages 1–5 remain preserved under `historical/stages1-5/`. The next computation
+is the exact Stage 4 N61 terminal regression using
+`run_scripts/run_stage4_n61_exact_regression.sh`.
+
+See `docs/PROJECT_STATUS.md` and the latest self-contained master HTML in `article/`.
 <!-- N301_V1_STATUS_END -->
