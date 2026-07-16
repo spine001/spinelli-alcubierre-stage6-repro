@@ -1,0 +1,146 @@
+
+===== EXECUTE NOTEBOOK CELL 0001 =====
+NumPy: 2.5.1
+Pandas: 3.0.3
+SciPy available: True
+
+===== EXECUTE NOTEBOOK CELL 0003 =====
+DIM = 4
+Requested N cap = 71
+Manual memory budget = 160.0 GiB
+Estimated scalar fields = 260
+Largest RAM-safe N selected = 71
+Estimated full-run footprint at N=71: 49.23 GiB
+Estimated full-run footprint at requested N=71: 49.23 GiB
+
+===== EXECUTE NOTEBOOK CELL 0005 =====
+
+===== EXECUTE NOTEBOOK CELL 0007 =====
+
+===== EXECUTE NOTEBOOK CELL 0009 =====
+Building geometry with dim=4, N=71
+Estimated full-run footprint: 49.23 GiB
+Built geometry: 4 71 (71, 71, 71, 71)
+
+===== EXECUTE NOTEBOOK CELL 0011 =====
+||G^a_b||_2 = 0.07374262468143811
+||nabla_a G^a_b||_2 = 0.0003346763025629747
+relative Bianchi residual = 0.004538437626932157
+
+===== EXECUTE NOTEBOOK CELL 0012 =====
+
+===== EXECUTE NOTEBOOK CELL 0014 =====
+Hessian Q ||Q||: 0.020810093188972194
+Hessian Q ||div Q||: 0.0003234938883622026
+C/Q: 0.015545047560557315
+
+===== EXECUTE NOTEBOOK CELL 0015 =====
+
+===== EXECUTE NOTEBOOK CELL 0017 =====
+lambda_fit = 0.016046992783419523
+beta_fit = -1.0342960186715253
+fit residual ratio = 0.5698204483123992
+
+===== EXECUTE NOTEBOOK CELL 0018 =====
+
+===== EXECUTE NOTEBOOK CELL 0019 =====
+
+===== EXECUTE NOTEBOOK CELL 0021 =====
+
+===== EXECUTE NOTEBOOK CELL 0023 =====
+Exporting Stage 4 outputs for DIM=4, N=71
+Export directory: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4_dim4_article_exports
+Stage 4A exports...
+Stage 4B exports...
+Stage 4C analytic residual exports...
+Stage 4C direct candidate ranking exports...
+Computing direct candidate: H
+  done in 6.8 s, C/Q=0.015545
+Computing direct candidate: HT lambda_fit=0.016047
+  done in 7.2 s, C/Q=0.0152289
+Computing direct candidate: R beta_fit=-1.0343
+  done in 7.2 s, C/Q=0.0128242
+Computing direct candidate: HTR lambda_fit=0.016047, beta_fit=-1.0343
+  done in 7.7 s, C/Q=0.0127055
+Best direct candidate: HTR lambda_fit=0.016047, beta_fit=-1.0343
+
+EXPORT COMPLETE
+Folder: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4_dim4_article_exports
+ZIP: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4_dim4_article_exports.zip
+
+Please upload this ZIP file back here:
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4_dim4_article_exports.zip
+   DIM   N        dt        dx        dy        dz      G_L2   divG_L2  relative_Bianchi_residual  rho_num_min   rho_num_max  rho_A_min  rho_A_max  rho_relative_peak_error
+0    4  71  0.011429  0.142857  0.142857  0.142857  0.073743  0.000335                   0.004538    -0.000607 -1.265881e-11  -0.000622       -0.0                 0.037034
+   DIM   N     Q_L2      C_L2  normalized_Q_conservation_residual    S_peak  Q00_peak_abs    C_peak
+0    4  71  0.02081  0.000323                            0.015545  0.009353      0.118845  0.004236
+   DIM   N  lambda_fit  beta_fit  residual_H  residual_HT_lambda_fit  residual_R_beta_fit  residual_HTR_lambda_beta_fit  improvement_HT_over_H  improvement_R_over_H  improvement_HTR_over_H
+0    4  71    0.016047 -1.034296    0.000118                0.000112             0.000072                      0.000067               0.053619               0.38695                 0.43018
+                                   candidate    lambda      beta      Q_L2      C_L2  C_over_Q  normalized_residual  rank
+0  HTR lambda_fit=0.016047, beta_fit=-1.0343  0.016047 -1.034296  0.020820  0.000265  0.012705             0.012705     1
+1                         R beta_fit=-1.0343  0.000000 -1.034296  0.020839  0.000267  0.012824             0.012824     2
+2                     HT lambda_fit=0.016047  0.016047  0.000000  0.020791  0.000317  0.015229             0.015229     3
+3                                          H  0.000000  0.000000  0.020810  0.000323  0.015545             0.015545     4
+
+===== EXECUTE NOTEBOOK CELL 0024 =====
+Stage 4D action-derived Q comparison
+lambda_fit  = 0.016046992783419523
+beta_fit    = -1.0342960186715253
+beta_action = -1.0
+                       case    lambda      beta      Q_L2      C_L2  normalized_residual  relative_tensor_difference_vs_fit
+0           Best fitted HTR  0.016047 -1.034296  0.020820  0.000265             0.012705                           0.000000
+1  Action-predicted beta=-1  0.016047 -1.000000  0.020819  0.000265             0.012706                           0.000295
+2   Difference action - fit       NaN  0.034296  0.000006  0.000006             0.959765                           0.000295
+
+Key interpretation numbers
+Relative tensor difference action vs fit: 0.0295%
+Action residual / fitted residual: 1.000004
+Residual penalty of action tensor: 0.0004%
+
+EXPORT COMPLETE
+Folder: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4D_action_Q_comparison_exports
+ZIP: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4D_action_Q_comparison_exports.zip
+
+Upload this ZIP back here so I can update the HTML article:
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4D_action_Q_comparison_exports.zip
+===== STAGE 4 N61/N71/N81 THREE-GRID ANALYSIS =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+
+relative_Bianchi_residual: N61=0.0060319121018904444 N71=0.0045384376269321574 N81=0.0035299983833249567 monotonic=True observed_order=1.7267070104527273 continuum=-0.0003588282098518081
+rho_relative_peak_error: N61=0.049646382638441233 N71=0.037033850908382716 N81=0.028586695368057888 monotonic=True observed_order=1.7830949018479556 continuum=-0.002834644812141459
+Hessian_Q_normalized_residual: N61=0.018923608329206223 N71=0.015545047560557315 N81=0.013574498106398779 monotonic=True observed_order=2.7370261825272846 continuum=0.009108198660075686
+HTR_normalized_residual: N61=0.016614410807871981 N71=0.012705486513730447 N81=0.010241875755526996 monotonic=True observed_order=2.2027301630263936 continuum=0.003037560603582106
+lambda_fit: N61=0.015789560483007618 N71=0.016046992783419523 N81=0.016227418581089042 monotonic=True observed_order=1.4690537419967313 continuum=0.017059919691673427
+beta_fit: N61=-1.0306645653701305 N71=-1.0342960186715253 N81=-1.0365130131338942 monotonic=True observed_order=2.422390450993694 continuum=-1.0423180612666993
+action_over_fit: N61=1.0000226651967665 N71=1.0000040192679722 N81=1.0000244510928271 monotonic=False observed_order=None continuum=None
+action_fit_tensor_difference_percent: N61=0.027417084419199243 N71=0.029452344399313043 N81=0.030532788698467608 monotonic=True observed_order=3.384550087655205 continuum=0.03242378170016672
+
+STAGE4_N71_RUN_RESULT=PASS
+PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107.zip
+	Command being timed: "nice -n 5 ionice -c2 -n7 /home/julio/.venvs/spinelli-stage4-n61/bin/python scripts/run_stage4_n71_three_grid_analysis.py --repo /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro --n61-dir /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453 --n81-dir /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N81_20260715_221835 --output-dir /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107"
+	User time (seconds): 120.97
+	System time (seconds): 37.88
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:31.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 109383392
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5639124
+	Voluntary context switches: 142
+	Involuntary context switches: 1738
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107/stage4_n71_three_grid.run.log

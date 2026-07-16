@@ -1,0 +1,14 @@
+===== STAGE 4 N71 THREE-GRID PREFLIGHT =====
+Generated: 2026-07-16T11:11:07-04:00
+HEAD: 1afef02806d804baf1f656e97adb96b2434fd4dc
+Notebook patch anchors: PASS
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.5Gi       227Gi       145Mi        13Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+Available RAM GiB: 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Swap occupancy is informational.
+Free filesystem GiB: 537
+Projected N71 peak RSS: 104.48 GiB
+Projected N71 runtime: about 150 seconds
+PREFLIGHT_RESULT=PASS

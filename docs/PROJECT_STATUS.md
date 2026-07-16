@@ -1,73 +1,63 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
 **Status date:** 2026-07-16  
-**Run baseline commit:** `0ebf492f3800cf108e735ec59e5ea85358b19e66`  
+**Current published baseline before this update:** `1afef02806d804baf1f656e97adb96b2434fd4dc`  
 **Authoritative Stage 4 notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
-## Stage 4R N61
+## Publication state
 
-The exact terminal regression reproduced all six recovered Stage 4A–4D canonical tables
-within the declared floating-point tolerances.
+Stage 4R N81 was published successfully in commit
+`1afef02806d804baf1f656e97adb96b2434fd4dc`.
 
-## Stage 4R N81
+## Stage 4R N71
 
-The controlled N81 resolution run completed successfully.
+N71 completed successfully using the same physical parameters as N61 and N81.
 
-- Historical notebook modified on disk: no
-- Selected grid: DIM=4, N=81
-- Runtime: 254.07 seconds
-- Peak RSS: 176.983734 GiB
+- DIM=4, N=71
+- Runtime: 151.29 seconds
+- Peak RSS: 104.316132 GiB
 - Swap: 0
-- Exit status: 0
+- All notebook cells: PASS
+- Historical notebook modified on disk: no
 
-### N61 → N81 trends
+## Corrected three-grid interpretation
 
-- Relative Bianchi residual: -41.478%
-- Classical rho peak error: -42.419%
-- Hessian-Q residual: -28.267%
-- Best HTR residual: -38.355%
+The principal residuals decrease monotonically from N61 to N71 to N81.
 
-Geometry and conservation diagnostics therefore improve strongly with resolution.
+- Bianchi pairwise orders:
+  1.845,
+  1.882
+- Classical rho error pairwise orders:
+  1.901,
+  1.939
+- Hessian-Q pairwise orders:
+  1.276,
+  1.015
+- HTR pairwise orders:
+  1.740,
+  1.614
 
-`lambda_fit` increased by 2.773%. `beta_fit`
-moved from -1.03066456537 to -1.03651301313. Action/Fit
-remained extremely close to unity at 1.00002445109283,
-but the tiny action-fit tensor difference increased to
-0.030532789%.
-
-The proper conclusion is strong two-grid numerical improvement, not complete coefficient
-convergence.
+The negative continuum values generated for Bianchi and rho by the original unconstrained
+three-point fit are rejected as physically inadmissible for nonnegative quantities.
+Original reports remain preserved for provenance.
 
 ## Resource model
 
-The N61-based N^4 prediction for N81 was 176.466 GiB. The measured peak was
-176.984 GiB, an error of only 0.293%.
+The N^4 model predicted N71 peak RSS within 0.155% and runtime within
+0.870%. It is the operative resource model for dense Stage 4 runs.
 
-The notebook's internal estimate of 83.388 GiB was low by a factor of
-2.122. Future dense-grid safety checks must use measured
-peak scaling rather than the notebook estimate alone.
+## Next numerical task
 
-## Next run
+Proper-time-step sensitivity at fixed N71:
 
-Run N71 as the intermediate third grid.
+- DELTA_TAU = 0.02
+- DELTA_TAU = 0.04
+- DELTA_TAU = 0.08
 
-- Projected peak RSS: 104.48 GiB
-- Projected runtime: 150.0 seconds
-- Purpose: generalized three-grid observed-order and continuum-estimate analysis
-
-N91 and N101 are not selected because measured N^4 scaling projects approximately
-281.9 GiB and 427.8 GiB respectively.
-
-## Later order
-
-1. N71 three-grid resolution analysis.
-2. Stage 4 delta-tau sensitivity.
-3. Domain-size and interior-crop sensitivity.
-4. Derivative-order sensitivity.
-5. Stage 5 observer-projected energy-density reanalysis.
-6. Adaptive Stage 5 parameter revalidation.
+The sensitivity matrix should run each case in a separate Python process and compare
+Bianchi, rho error, Hessian-Q, HTR, lambda, beta, Action/Fit, and tensor difference.
 
 ## Preservation rule
 
-Historical sources remain immutable under `historical/stages1-5/`. New computations are
-stored under separate `results/stage4_revalidation_*` paths.
+Historical artifacts remain immutable. Raw N71 reports, including the original
+three-point extrapolation, remain published beside this corrected interpretation.
