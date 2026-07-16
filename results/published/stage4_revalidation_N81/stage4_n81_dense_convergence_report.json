@@ -1,0 +1,226 @@
+{
+  "started_utc": "2026-07-16T02:18:35Z",
+  "repo": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro",
+  "notebook": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/notebooks/stage4/Spinelli_Alcubierre_Stage4C_DIM4_memory_optimized.ipynb",
+  "notebook_sha256": "1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe",
+  "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+  "target_N": 81,
+  "in_memory_override": {
+    "old": "MANUAL_MEMORY_BUDGET_GIB = 28.0",
+    "new": "MANUAL_MEMORY_BUDGET_GIB = 220.0",
+    "historical_notebook_modified_on_disk": false,
+    "original_cell_sha256": "5a49221d2ba22d35ee05b94fa968dfc9e1628ccc5d228e08712264db8f5291a5",
+    "patched_cell_sha256": "0515c59cc3bf125481ce5a89ba6d24b68bd9178dff109ce1efa39e03e8fe1f8f"
+  },
+  "n61_dir": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453",
+  "cells": [
+    {
+      "cell_index": 1,
+      "historical_execution_count": 2,
+      "started_utc": "2026-07-16T02:18:35Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.2927272319793701,
+      "max_rss_kib": 154168
+    },
+    {
+      "cell_index": 3,
+      "historical_execution_count": 16,
+      "started_utc": "2026-07-16T02:18:35Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002086162567138672,
+      "max_rss_kib": 154168
+    },
+    {
+      "cell_index": 5,
+      "historical_execution_count": 17,
+      "started_utc": "2026-07-16T02:18:35Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002491474151611328,
+      "max_rss_kib": 154168
+    },
+    {
+      "cell_index": 7,
+      "historical_execution_count": 18,
+      "started_utc": "2026-07-16T02:18:35Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006055831909179688,
+      "max_rss_kib": 154680
+    },
+    {
+      "cell_index": 9,
+      "historical_execution_count": 19,
+      "started_utc": "2026-07-16T02:18:35Z",
+      "status": "PASS",
+      "elapsed_seconds": 66.50729250907898,
+      "max_rss_kib": 49261864
+    },
+    {
+      "cell_index": 11,
+      "historical_execution_count": 20,
+      "started_utc": "2026-07-16T02:19:41Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.5604407787322998,
+      "max_rss_kib": 49261864
+    },
+    {
+      "cell_index": 12,
+      "historical_execution_count": 21,
+      "started_utc": "2026-07-16T02:19:42Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.2393810749053955,
+      "max_rss_kib": 49264164
+    },
+    {
+      "cell_index": 14,
+      "historical_execution_count": 22,
+      "started_utc": "2026-07-16T02:19:42Z",
+      "status": "PASS",
+      "elapsed_seconds": 17.32466197013855,
+      "max_rss_kib": 69771164
+    },
+    {
+      "cell_index": 15,
+      "historical_execution_count": 23,
+      "started_utc": "2026-07-16T02:20:00Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.23142361640930176,
+      "max_rss_kib": 70116844
+    },
+    {
+      "cell_index": 17,
+      "historical_execution_count": 24,
+      "started_utc": "2026-07-16T02:20:00Z",
+      "status": "PASS",
+      "elapsed_seconds": 4.435184001922607,
+      "max_rss_kib": 82385120
+    },
+    {
+      "cell_index": 18,
+      "historical_execution_count": 25,
+      "started_utc": "2026-07-16T02:20:04Z",
+      "status": "PASS",
+      "elapsed_seconds": 62.48446011543274,
+      "max_rss_kib": 93179000
+    },
+    {
+      "cell_index": 19,
+      "historical_execution_count": 26,
+      "started_utc": "2026-07-16T02:21:07Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.010406255722045898,
+      "max_rss_kib": 93179000
+    },
+    {
+      "cell_index": 21,
+      "historical_execution_count": 27,
+      "started_utc": "2026-07-16T02:21:07Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002789497375488281,
+      "max_rss_kib": 93179000
+    },
+    {
+      "cell_index": 23,
+      "historical_execution_count": 28,
+      "started_utc": "2026-07-16T02:21:07Z",
+      "status": "PASS",
+      "elapsed_seconds": 56.10323882102966,
+      "max_rss_kib": 133530780
+    },
+    {
+      "cell_index": 24,
+      "historical_execution_count": null,
+      "started_utc": "2026-07-16T02:22:03Z",
+      "status": "PASS",
+      "elapsed_seconds": 45.56095480918884,
+      "max_rss_kib": 185580896
+    }
+  ],
+  "selected_configuration": {
+    "DIM": 4,
+    "N": 81,
+    "N_REQUESTED": 81,
+    "MANUAL_MEMORY_BUDGET_GIB": 220.0,
+    "R_BUBBLE": 3.0,
+    "SIGMA": 1.0,
+    "V_S": 0.5,
+    "EXTENT": 5.0,
+    "T_EXTENT": 0.4,
+    "DELTA_TAU": 0.04,
+    "INTERIOR_CROP": 3
+  },
+  "resolution_metrics": [
+    {
+      "metric": "relative_Bianchi_residual",
+      "N61": 0.006031912101890444,
+      "N81": 0.0035299983833249567,
+      "percent_change": -41.47795386112092,
+      "preferred_direction": "lower",
+      "trend": "IMPROVED"
+    },
+    {
+      "metric": "rho_relative_peak_error",
+      "N61": 0.04964638263844123,
+      "N81": 0.02858669536805789,
+      "percent_change": -42.419379119228736,
+      "preferred_direction": "lower",
+      "trend": "IMPROVED"
+    },
+    {
+      "metric": "Hessian_Q_normalized_residual",
+      "N61": 0.018923608329206223,
+      "N81": 0.01357449810639878,
+      "percent_change": -28.26686184659487,
+      "preferred_direction": "lower",
+      "trend": "IMPROVED"
+    },
+    {
+      "metric": "HTR_normalized_residual",
+      "N61": 0.01661441080787198,
+      "N81": 0.010241875755526996,
+      "percent_change": -38.35546818985389,
+      "preferred_direction": "lower",
+      "trend": "IMPROVED"
+    },
+    {
+      "metric": "lambda_fit",
+      "N61": 0.015789560483007618,
+      "N81": 0.016227418581089042,
+      "percent_change": 2.7730860434819427,
+      "preferred_direction": "record_only",
+      "trend": "RECORD_ONLY"
+    },
+    {
+      "metric": "beta_fit",
+      "N61": -1.0306645653701305,
+      "N81": -1.0365130131338942,
+      "percent_change": -0.5674443422495478,
+      "preferred_direction": "record_only",
+      "trend": "RECORD_ONLY"
+    },
+    {
+      "metric": "action_over_fit",
+      "N61": 1.0000226651967665,
+      "N81": 1.0000244510928271,
+      "percent_change": 0.00017858555838227817,
+      "preferred_direction": "closer_to_one",
+      "trend": "WORSENED"
+    },
+    {
+      "metric": "action_fit_tensor_difference_percent",
+      "N61": 0.027417084419199243,
+      "N81": 0.03053278869846761,
+      "percent_change": 11.364097770682521,
+      "preferred_direction": "lower",
+      "trend": "WORSENED"
+    }
+  ],
+  "interpretation": {
+    "geometry_trend": "IMPROVED",
+    "conservation_trend": "IMPROVED",
+    "formal_convergence_order_available": false,
+    "reason": "Only N61 and N81 are currently available in this controlled series."
+  },
+  "finished_utc": "2026-07-16T02:22:48Z",
+  "max_rss_kib": 185580896,
+  "run_status": "PASS"
+}

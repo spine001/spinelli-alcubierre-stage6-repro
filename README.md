@@ -64,16 +64,16 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-16
 
-Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` passed the rho-aware v2 gate, and its isolated
-extreme-rho tile was classified as `LIKELY_BOUNDARY_OR_HALO_ARTIFACT`.
+Stage 6E N301 `v_s=1.0` passed the rho-aware v2 gate and its isolated rho warning was
+classified as likely boundary/halo-related.
 
-Stage 4R N61 has now been reproduced directly from the recovered authoritative notebook:
-all six canonical Stage 4A–4D tables passed, with no differences outside `rtol=1e-8` and
-`atol=1e-10`. The published evidence is under
-`results/published/stage4_revalidation_N61/`.
+Stage 4R N61 exactly reproduced all six recovered canonical tables. Stage 4R N81 then
+completed successfully and reduced the Bianchi, rho, Hessian-Q, and HTR residual metrics
+by approximately 28%–42%. N81 used 176.984 GiB peak RSS and no swap.
 
-The next computation is the controlled N81 dense resolution run using
-`run_scripts/run_stage4_n81_dense_convergence.sh`.
+The next computation is N71, an intermediate third grid for generalized three-grid
+observed-order analysis. Use `run_scripts/run_stage4_n71_three_grid.sh`.
 
-See `docs/PROJECT_STATUS.md` and the latest self-contained master HTML in `article/`.
+See `docs/PROJECT_STATUS.md`, the N61→N81 analysis document, and the latest self-contained
+master HTML under `article/`.
 <!-- N301_V1_STATUS_END -->

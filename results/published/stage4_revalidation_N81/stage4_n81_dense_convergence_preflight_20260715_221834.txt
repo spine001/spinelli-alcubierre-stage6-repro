@@ -1,0 +1,42 @@
+===== STAGE 4 N81 DENSE CONVERGENCE PREFLIGHT =====
+Generated: 2026-07-15T22:18:34-04:00
+Repository: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro
+HEAD: 0ebf492f3800cf108e735ec59e5ea85358b19e66
+
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+
+===== PYTHON ENVIRONMENT =====
+python 3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]
+numpy 2.5.1
+pandas 3.0.3
+matplotlib 3.11.0
+scipy 1.18.0
+psutil 7.2.2
+
+===== VERIFIED N61 BASELINE =====
+N61 baseline: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453
+N61 regression status: PASS
+
+===== MEMORY AND STORAGE =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.4Gi       227Gi       118Mi        13Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Available RAM GiB (integer): 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Existing swap occupancy is informational.
+MemAvailable is the hard memory requirement.
+Free filesystem GiB (integer): 537
+
+===== HEAVY COMPUTE PROCESS CHECK =====
+No matching heavy-compute process detected.
+
+===== RESOURCE PROJECTION =====
+Measured N61 peak RSS: 56.7597 GiB
+N^4-scaled N81 projection: 176.466 GiB
+Required available RAM: 220 GiB
+Swap is emergency protection only; this run should remain resident in RAM.
+
+PREFLIGHT_RESULT=PASS

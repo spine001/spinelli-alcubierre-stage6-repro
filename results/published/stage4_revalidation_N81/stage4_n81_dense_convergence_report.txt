@@ -1,0 +1,23 @@
+===== STAGE 4 N81 DENSE RESOLUTION RUN =====
+Notebook: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/notebooks/stage4/Spinelli_Alcubierre_Stage4C_DIM4_memory_optimized.ipynb
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N81_20260715_221835
+Historical notebook modified on disk: NO
+In-memory override: MANUAL_MEMORY_BUDGET_GIB = 28.0 -> MANUAL_MEMORY_BUDGET_GIB = 220.0
+Selected N: 81
+
+===== N61 TO N81 METRICS =====
+relative_Bianchi_residual: N61=0.0060319121018904444 N81=0.0035299983833249567 change=-41.478% trend=IMPROVED
+rho_relative_peak_error: N61=0.049646382638441233 N81=0.028586695368057888 change=-42.4194% trend=IMPROVED
+Hessian_Q_normalized_residual: N61=0.018923608329206223 N81=0.013574498106398779 change=-28.2669% trend=IMPROVED
+HTR_normalized_residual: N61=0.016614410807871981 N81=0.010241875755526996 change=-38.3555% trend=IMPROVED
+lambda_fit: N61=0.015789560483007618 N81=0.016227418581089042 change=2.77309% trend=RECORD_ONLY
+beta_fit: N61=-1.0306645653701305 N81=-1.0365130131338942 change=-0.567444% trend=RECORD_ONLY
+action_over_fit: N61=1.0000226651967665 N81=1.0000244510928271 change=0.000178586% trend=WORSENED
+action_fit_tensor_difference_percent: N61=0.027417084419199243 N81=0.030532788698467608 change=11.3641% trend=WORSENED
+
+Geometry trend: IMPROVED
+Conservation trend: IMPROVED
+Formal convergence order: NOT YET AVAILABLE (two resolutions only)
+
+STAGE4_N81_RUN_RESULT=PASS
