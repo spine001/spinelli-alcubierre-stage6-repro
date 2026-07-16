@@ -81,12 +81,21 @@ PY
     exit 1
   fi
 
-  SWAP_USED_KIB="$(awk '/SwapTotal:/ {t=$2} /SwapFree:/ {f=$2} END {print t-f}' /proc/meminfo)"
-  echo "Current swap used KiB: $SWAP_USED_KIB"
-  if [[ "$SWAP_USED_KIB" -gt $((2 * 1024 * 1024)) ]]; then
-    echo "ERROR: more than 2 GiB swap is already in use; postpone N81."
-    exit 1
-  fi
+  SWAP_TOTAL_KIB="$(awk '/SwapTotal:/ {print $2}' /proc/meminfo)"
+  SWAP_FREE_KIB="$(awk '/SwapFree:/ {print $2}' /proc/meminfo)"
+  SWAP_USED_KIB="$((SWAP_TOTAL_KIB - SWAP_FREE_KIB))"
+
+  awk \
+    -v used="$SWAP_USED_KIB" \
+    -v total="$SWAP_TOTAL_KIB" \
+    'BEGIN {
+       printf "Swap used: %.3f GiB of %.3f GiB\n",
+              used / 1048576,
+              total / 1048576
+     }'
+
+  echo "Existing swap occupancy is informational."
+  echo "MemAvailable is the hard memory requirement."
 
   FREE_KIB="$(df --output=avail -k "$REPO" | tail -n 1 | tr -d ' ')"
   FREE_GIB="$((FREE_KIB / 1024 / 1024))"
@@ -100,7 +109,7 @@ PY
   echo "===== HEAVY COMPUTE PROCESS CHECK ====="
   MATCHES="$(
     pgrep -af \
-      'stage6_alcubierre|run_stage6E|N301_v|python3 .*run_stage4_n(61|81)|run_stage4_n81_dense_convergence' \
+      'python.*(run_stage4_n61_exact_regression|run_stage4_n81_dense_convergence|stage6_alcubierre|run_stage6E)' \
       || true
   )"
   if [[ -n "$MATCHES" ]]; then
