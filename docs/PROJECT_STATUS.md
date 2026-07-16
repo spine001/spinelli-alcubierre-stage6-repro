@@ -1,62 +1,63 @@
-# Spinelli Framework / Alcubierre Validation — Current Project Status
+# Spinelli Framework / Alcubierre Validation — Project Status
 
-**Status date:** 2026-07-15  
-**Current public baseline:** `1ea683db30bbe9d9c303205fa613bb9d50c9a96a`  
+**Status date:** 2026-07-16  
+**Current verified public baseline:** `a5465aa215af01d0eda8a23b0c12a91193ba3842`  
 **Historical Stage 1–5 recovery:** `0f9dba3e1574cf4e25b0f9f8a9d8d65854ee71d4`
 
-## Completed work
+## Stage 6E
 
-- Historical Stages 1–5 are preserved with article lineage, notebooks, result tables,
-  export packages, checksums, and explicit retrospective-provenance disclosure.
-- Stage 6E rho-aware v2 PASS results are complete at N261 and N301 for
-  `v_s=0.5` and `v_s=1.0`.
-- The N301 `v_s=1.0`, `sigma=4`, `R=3` summary and self-contained master were published
-  in commit `1ea683db30bbe9d9c303205fa613bb9d50c9a96a`.
-- The remaining N301 `v_s=1.0` extreme-rho warning was examined with the established
-  local ring-neighborhood diagnostic.
+The N301 `v_s=1.0`, `sigma=4`, `R=3` case passed the rho-aware v2 gate. Its isolated
+extreme-rho tile was classified as `LIKELY_BOUNDARY_OR_HALO_ARTIFACT` by the full local
+ring-neighborhood diagnostic. The warning and detailed evidence remain preserved.
 
-## N301 v_s=1.0 outlier closure
+## Stage 4R exact N61 regression
 
-Target:
+The recovered authoritative notebook was executed directly from the terminal on the
+256 GB server.
 
-`N301_v1_sigma4_R3/tiles/tile000864_t0-9_x62-93_y155-186_z126-135.score.json`
+- Notebook SHA-256: `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
+- Configuration: DIM=4, N=61, R=3, sigma=1, `v_s=0.5`, delta-tau=0.04, crop=3
+- Canonical tables checked: 6
+- Tables passing: 6
+- Differences outside tolerance: 0
+- Maximum absolute difference: `7.3712147496962643e-12`
+- Maximum relative difference: `1.0384524074045325e-09`
+- Wall-clock runtime: 83.79 seconds
+- Peak resident memory: 56.759686 GiB
+- Swap events: 0
 
-Classification:
+The first two tables matched exactly. Remaining tables differed only at floating-point
+levels, with the largest absolute difference approximately `7.37e-12`.
 
-`LIKELY_BOUNDARY_OR_HALO_ARTIFACT`
+This validates the historical computational lineage and establishes the verified N61
+baseline for a new resolution series. It does not add an independent physical model or
+prove physical realizability.
 
-Runner result:
+## Next run
 
-`DIAGNOSTIC_RUN_RESULT=PASS`
+The next priority is Stage 4 N81 using the same notebook and physics parameters.
 
-The diagnostic loaded all 115,600 score files. The classification indicates that the
-isolated maximum-ratio tile is more consistent with a boundary/halo effect than with a
-spatially coherent physical failure. The detailed TXT, CSV, and JSON diagnostic records
-remain part of the auditable evidence and must be published.
+The notebook's original requested cap is already N=81. The controlled runner leaves the
+historical notebook unchanged on disk and modifies only its in-memory memory-budget line
+from 28 GiB to 220 GiB so that N=81 is selected.
 
-## Current scientific interpretation
+- Measured N61 peak RSS: 56.7597 GiB
+- N^4-scaled N81 projection: 176.4659 GiB
+- Required available physical RAM before start: 220 GiB
+- Swap policy: emergency protection only
 
-The N301 `v_s=1.0` case remains a rho-aware v2 PASS. The aggregate rho metric passes,
-the corrupt-tile exclusion fraction remains below the predeclared limit, and the isolated
-extreme warning has been locally classified.
+The N81 result will be compared with N61. Two resolutions can establish trends, but not a
+formal observed convergence order.
 
-This validates the defined numerical gate for the tested geometry. It does not establish
-physical realizability, engineering feasibility, chronology safety, or a general proof
-of the Spinelli Framework.
+## Later order
 
-## Next run order
-
-1. **Stage 4 exact N61 terminal regression.**
-   - Execute the original committed notebook code without Jupyter.
-   - Confirm that the new server reproduces the recovered Stage 4A–4D canonical tables.
-   - Treat this as a regression test, not as new evidence.
-
-2. **Stage 4 N81 dense convergence run**, only after N61 passes.
+1. Stage 4 N81 resolution run.
+2. Add a third resolution selected from the N81 result and measured memory behavior.
 3. Stage 4 delta-tau, domain-size, crop, and derivative-order sensitivity tests.
 4. Stage 5 observer-projected energy-density reanalysis.
 5. Adaptive Stage 5 parameter revalidation.
 
 ## Preservation rule
 
-The historical files under `historical/stages1-5/` are immutable evidence. New
-revalidation outputs belong under separate `results/stage4_revalidation_*` paths.
+`historical/stages1-5/` remains immutable. New outputs are stored under separate
+`results/stage4_revalidation_*` and `results/published/stage4_revalidation_*` paths.

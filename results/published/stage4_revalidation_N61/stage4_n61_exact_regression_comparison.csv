@@ -1,0 +1,7 @@
+table,status,generated_rows,historical_rows,max_abs_difference,max_relative_difference,difference_count
+stage4A_dim4_bianchi_validation.csv,PASS,1,1,0.0,0.0,0
+stage4B_dim4_hessian_Q_proxy.csv,PASS,1,1,0.0,0.0,0
+stage4C_dim4_candidate_ranking.csv,PASS,4,4,7.371214749696264e-12,7.15190470043608e-12,0
+stage4C_dim4_fit_parameters.csv,PASS,1,1,7.371214749696264e-12,7.15190470043608e-12,0
+stage4D_action_vs_fitted_Q_comparison.csv,PASS,3,3,7.371214749696264e-12,2.403821694177491e-10,0
+stage4D_action_vs_fitted_Q_summary.csv,PASS,1,1,7.371214749696264e-12,1.0384524074045325e-09,0

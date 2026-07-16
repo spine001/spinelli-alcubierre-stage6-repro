@@ -1,0 +1,213 @@
+{
+  "started_utc": "2026-07-16T01:24:53Z",
+  "repo": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro",
+  "notebook": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/notebooks/stage4/Spinelli_Alcubierre_Stage4C_DIM4_memory_optimized.ipynb",
+  "notebook_sha256": "1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe",
+  "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+  "rtol": 1e-08,
+  "atol": 1e-10,
+  "cells": [
+    {
+      "cell_index": 1,
+      "execution_count_historical": 2,
+      "started_utc": "2026-07-16T01:24:53Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.2947089672088623,
+      "max_rss_kib": 154268
+    },
+    {
+      "cell_index": 3,
+      "execution_count_historical": 16,
+      "started_utc": "2026-07-16T01:24:54Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.00019860267639160156,
+      "max_rss_kib": 154524
+    },
+    {
+      "cell_index": 5,
+      "execution_count_historical": 17,
+      "started_utc": "2026-07-16T01:24:54Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002532005310058594,
+      "max_rss_kib": 154524
+    },
+    {
+      "cell_index": 7,
+      "execution_count_historical": 18,
+      "started_utc": "2026-07-16T01:24:54Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006043910980224609,
+      "max_rss_kib": 155036
+    },
+    {
+      "cell_index": 9,
+      "execution_count_historical": 19,
+      "started_utc": "2026-07-16T01:24:54Z",
+      "status": "PASS",
+      "elapsed_seconds": 21.67975664138794,
+      "max_rss_kib": 15953032
+    },
+    {
+      "cell_index": 11,
+      "execution_count_historical": 20,
+      "started_utc": "2026-07-16T01:25:15Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.1562960147857666,
+      "max_rss_kib": 15953032
+    },
+    {
+      "cell_index": 12,
+      "execution_count_historical": 21,
+      "started_utc": "2026-07-16T01:25:16Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0930633544921875,
+      "max_rss_kib": 15955084
+    },
+    {
+      "cell_index": 14,
+      "execution_count_historical": 22,
+      "started_utc": "2026-07-16T01:25:16Z",
+      "status": "PASS",
+      "elapsed_seconds": 5.637899875640869,
+      "max_rss_kib": 22550476
+    },
+    {
+      "cell_index": 15,
+      "execution_count_historical": 23,
+      "started_utc": "2026-07-16T01:25:21Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.08642387390136719,
+      "max_rss_kib": 22663140
+    },
+    {
+      "cell_index": 17,
+      "execution_count_historical": 24,
+      "started_utc": "2026-07-16T01:25:21Z",
+      "status": "PASS",
+      "elapsed_seconds": 1.3281919956207275,
+      "max_rss_kib": 26324756
+    },
+    {
+      "cell_index": 18,
+      "execution_count_historical": 25,
+      "started_utc": "2026-07-16T01:25:23Z",
+      "status": "PASS",
+      "elapsed_seconds": 20.142744779586792,
+      "max_rss_kib": 29859944
+    },
+    {
+      "cell_index": 19,
+      "execution_count_historical": 26,
+      "started_utc": "2026-07-16T01:25:43Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.010562658309936523,
+      "max_rss_kib": 29859944
+    },
+    {
+      "cell_index": 21,
+      "execution_count_historical": 27,
+      "started_utc": "2026-07-16T01:25:43Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.00027489662170410156,
+      "max_rss_kib": 29859944
+    },
+    {
+      "cell_index": 23,
+      "execution_count_historical": 28,
+      "started_utc": "2026-07-16T01:25:43Z",
+      "status": "PASS",
+      "elapsed_seconds": 18.891860485076904,
+      "max_rss_kib": 42779240
+    },
+    {
+      "cell_index": 24,
+      "execution_count_historical": null,
+      "started_utc": "2026-07-16T01:26:02Z",
+      "status": "PASS",
+      "elapsed_seconds": 15.250086307525635,
+      "max_rss_kib": 59516844
+    }
+  ],
+  "selected_configuration": {
+    "DIM": 4,
+    "N": 61,
+    "R_BUBBLE": 3.0,
+    "SIGMA": 1.0,
+    "V_S": 0.5,
+    "EXTENT": 5.0,
+    "T_EXTENT": 0.4,
+    "DELTA_TAU": 0.04,
+    "INTERIOR_CROP": 3
+  },
+  "comparisons": [
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4_dim4_article_exports/stage4A_dim4_bianchi_validation.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4A_dim4_bianchi_validation.csv",
+      "generated_rows": 1,
+      "historical_rows": 1,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "table": "stage4A_dim4_bianchi_validation.csv"
+    },
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4_dim4_article_exports/stage4B_dim4_hessian_Q_proxy.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4B_dim4_hessian_Q_proxy.csv",
+      "generated_rows": 1,
+      "historical_rows": 1,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "table": "stage4B_dim4_hessian_Q_proxy.csv"
+    },
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4_dim4_article_exports/stage4C_dim4_candidate_ranking.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4C_dim4_candidate_ranking.csv",
+      "generated_rows": 4,
+      "historical_rows": 4,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 7.371214749696264e-12,
+      "max_relative_difference": 7.15190470043608e-12,
+      "table": "stage4C_dim4_candidate_ranking.csv"
+    },
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4_dim4_article_exports/stage4C_dim4_fit_parameters.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4C_dim4_fit_parameters.csv",
+      "generated_rows": 1,
+      "historical_rows": 1,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 7.371214749696264e-12,
+      "max_relative_difference": 7.15190470043608e-12,
+      "table": "stage4C_dim4_fit_parameters.csv"
+    },
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4D_action_Q_comparison_exports/stage4D_action_vs_fitted_Q_comparison.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4D/primary_tables/stage4D_action_vs_fitted_Q_comparison.csv",
+      "generated_rows": 3,
+      "historical_rows": 3,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 7.371214749696264e-12,
+      "max_relative_difference": 2.403821694177491e-10,
+      "table": "stage4D_action_vs_fitted_Q_comparison.csv"
+    },
+    {
+      "generated": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453/stage4D_action_Q_comparison_exports/stage4D_action_vs_fitted_Q_summary.csv",
+      "historical": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/results/stage4/stage4D/primary_tables/stage4D_action_vs_fitted_Q_summary.csv",
+      "generated_rows": 1,
+      "historical_rows": 1,
+      "status": "PASS",
+      "differences": [],
+      "max_abs_difference": 7.371214749696264e-12,
+      "max_relative_difference": 1.0384524074045325e-09,
+      "table": "stage4D_action_vs_fitted_Q_summary.csv"
+    }
+  ],
+  "overall_regression_status": "PASS",
+  "finished_utc": "2026-07-16T01:26:17Z",
+  "max_rss_kib": 59516844
+}

@@ -186,9 +186,21 @@ def main() -> int:
             f"Notebook SHA mismatch: {actual_sha} != {EXPECTED_NOTEBOOK_SHA256}"
         )
 
-    if output.exists() and any(output.iterdir()):
-        raise SystemExit(f"Output directory is not empty: {output}")
     output.mkdir(parents=True, exist_ok=True)
+
+    allowed_preexisting = {
+        "stage4_n61_exact_regression.run.log",
+    }
+    unexpected_existing = [
+        item for item in output.iterdir()
+        if item.name not in allowed_preexisting
+    ]
+
+    if unexpected_existing:
+        names = ", ".join(sorted(item.name for item in unexpected_existing))
+        raise SystemExit(
+            f"Output directory contains unexpected files: {output}: {names}"
+        )
 
     run_metadata: dict[str, Any] = {
         "started_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),

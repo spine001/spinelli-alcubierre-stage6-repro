@@ -1,0 +1,14 @@
+===== STAGE 4 N61 EXACT TERMINAL REGRESSION =====
+Notebook: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/notebooks/stage4/Spinelli_Alcubierre_Stage4C_DIM4_memory_optimized.ipynb
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N61_20260715_212453
+Overall regression status: PASS
+
+stage4A_dim4_bianchi_validation.csv: PASS max_abs=0.0 max_rel=0.0 differences=0
+stage4B_dim4_hessian_Q_proxy.csv: PASS max_abs=0.0 max_rel=0.0 differences=0
+stage4C_dim4_candidate_ranking.csv: PASS max_abs=7.371214749696264e-12 max_rel=7.15190470043608e-12 differences=0
+stage4C_dim4_fit_parameters.csv: PASS max_abs=7.371214749696264e-12 max_rel=7.15190470043608e-12 differences=0
+stage4D_action_vs_fitted_Q_comparison.csv: PASS max_abs=7.371214749696264e-12 max_rel=2.403821694177491e-10 differences=0
+stage4D_action_vs_fitted_Q_summary.csv: PASS max_abs=7.371214749696264e-12 max_rel=1.0384524074045325e-09 differences=0
+
+STAGE4_N61_REGRESSION_RESULT=PASS

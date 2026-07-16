@@ -62,16 +62,18 @@ Then use the scripts in run_scripts/, or call the Python scripts directly.
 https://github.com/spine001/spinelli-alcubierre-stage6-repro
 
 <!-- N301_V1_STATUS_START -->
-## Current validation status — 2026-07-15
+## Current validation status — 2026-07-16
 
-Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` passed the rho-aware v2 gate.
-The isolated extreme-rho tile was subsequently classified by the local ring-neighborhood
-diagnostic as `LIKELY_BOUNDARY_OR_HALO_ARTIFACT`. Detailed TXT, CSV, and JSON diagnostic
-records are published beside the N301 summary.
+Stage 6E N301, `v_s=1.0`, `sigma=4`, `R=3` passed the rho-aware v2 gate, and its isolated
+extreme-rho tile was classified as `LIKELY_BOUNDARY_OR_HALO_ARTIFACT`.
 
-Historical Stages 1–5 remain preserved under `historical/stages1-5/`. The next computation
-is the exact Stage 4 N61 terminal regression using
-`run_scripts/run_stage4_n61_exact_regression.sh`.
+Stage 4R N61 has now been reproduced directly from the recovered authoritative notebook:
+all six canonical Stage 4A–4D tables passed, with no differences outside `rtol=1e-8` and
+`atol=1e-10`. The published evidence is under
+`results/published/stage4_revalidation_N61/`.
+
+The next computation is the controlled N81 dense resolution run using
+`run_scripts/run_stage4_n81_dense_convergence.sh`.
 
 See `docs/PROJECT_STATUS.md` and the latest self-contained master HTML in `article/`.
 <!-- N301_V1_STATUS_END -->

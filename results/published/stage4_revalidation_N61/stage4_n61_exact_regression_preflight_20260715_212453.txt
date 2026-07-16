@@ -1,0 +1,37 @@
+===== STAGE 4 N61 EXACT REGRESSION PREFLIGHT =====
+Generated: 2026-07-15T21:24:53-04:00
+Repository: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro
+HEAD: a5465aa215af01d0eda8a23b0c12a91193ba3842
+
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+
+===== PYTHON DEPENDENCIES =====
+Python dependencies import successfully.
+numpy 2.5.1
+pandas 3.0.3
+matplotlib 3.11.0
+scipy 1.18.0
+psutil 7.2.2
+
+===== MEMORY AND STORAGE =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.4Gi       227Gi        91Mi        13Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Available RAM GiB (integer): 238
+Free filesystem GiB (integer): 537
+
+===== HEAVY COMPUTE PROCESS CHECK =====
+No matching heavy-compute process detected.
+
+===== HISTORICAL REFERENCE TABLES =====
+OK historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4A_dim4_bianchi_validation.csv
+OK historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4B_dim4_hessian_Q_proxy.csv
+OK historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4C_dim4_candidate_ranking.csv
+OK historical/stages1-5/results/stage4/stage4A-C/primary_tables/stage4C_dim4_fit_parameters.csv
+OK historical/stages1-5/results/stage4/stage4D/primary_tables/stage4D_action_vs_fitted_Q_comparison.csv
+OK historical/stages1-5/results/stage4/stage4D/primary_tables/stage4D_action_vs_fitted_Q_summary.csv
+
+PREFLIGHT_RESULT=PASS
