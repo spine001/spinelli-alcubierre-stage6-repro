@@ -1,0 +1,150 @@
+{
+  "started_utc": "2026-07-16T23:46:17Z",
+  "repo": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro",
+  "notebook": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/historical/stages1-5/notebooks/stage4/Spinelli_Alcubierre_Stage4C_DIM4_memory_optimized.ipynb",
+  "notebook_sha256": "1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe",
+  "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+  "target_N": 71,
+  "target_delta_tau": 0.08,
+  "historical_notebook_modified_on_disk": false,
+  "in_memory_overrides": [
+    "MANUAL_MEMORY_BUDGET_GIB = 28.0 -> MANUAL_MEMORY_BUDGET_GIB = 160.0",
+    "N_REQUESTED = 81 -> N_REQUESTED = 71",
+    "DELTA_TAU = 0.04 -> DELTA_TAU = 0.08"
+  ],
+  "cells": [
+    {
+      "cell_index": 1,
+      "started_utc": "2026-07-16T23:46:17Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.28524255752563477,
+      "max_rss_kib": 154364
+    },
+    {
+      "cell_index": 3,
+      "started_utc": "2026-07-16T23:46:18Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.00019979476928710938,
+      "max_rss_kib": 154364
+    },
+    {
+      "cell_index": 5,
+      "started_utc": "2026-07-16T23:46:18Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.00025463104248046875,
+      "max_rss_kib": 154364
+    },
+    {
+      "cell_index": 7,
+      "started_utc": "2026-07-16T23:46:18Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006008148193359375,
+      "max_rss_kib": 154876
+    },
+    {
+      "cell_index": 9,
+      "started_utc": "2026-07-16T23:46:18Z",
+      "status": "PASS",
+      "elapsed_seconds": 39.11400103569031,
+      "max_rss_kib": 29147588
+    },
+    {
+      "cell_index": 11,
+      "started_utc": "2026-07-16T23:46:57Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.3018147945404053,
+      "max_rss_kib": 29147588
+    },
+    {
+      "cell_index": 12,
+      "started_utc": "2026-07-16T23:46:57Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.1492466926574707,
+      "max_rss_kib": 29149936
+    },
+    {
+      "cell_index": 14,
+      "started_utc": "2026-07-16T23:46:57Z",
+      "status": "PASS",
+      "elapsed_seconds": 10.315934896469116,
+      "max_rss_kib": 41255440
+    },
+    {
+      "cell_index": 15,
+      "started_utc": "2026-07-16T23:47:07Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.1420459747314453,
+      "max_rss_kib": 41460720
+    },
+    {
+      "cell_index": 17,
+      "started_utc": "2026-07-16T23:47:08Z",
+      "status": "PASS",
+      "elapsed_seconds": 2.532167673110962,
+      "max_rss_kib": 48472696
+    },
+    {
+      "cell_index": 18,
+      "started_utc": "2026-07-16T23:47:10Z",
+      "status": "PASS",
+      "elapsed_seconds": 36.81105351448059,
+      "max_rss_kib": 54895600
+    },
+    {
+      "cell_index": 19,
+      "started_utc": "2026-07-16T23:47:47Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.010189294815063477,
+      "max_rss_kib": 54895600
+    },
+    {
+      "cell_index": 21,
+      "started_utc": "2026-07-16T23:47:47Z",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002808570861816406,
+      "max_rss_kib": 54895600
+    },
+    {
+      "cell_index": 23,
+      "started_utc": "2026-07-16T23:47:47Z",
+      "status": "PASS",
+      "elapsed_seconds": 33.58443999290466,
+      "max_rss_kib": 78664264
+    },
+    {
+      "cell_index": 24,
+      "started_utc": "2026-07-16T23:48:21Z",
+      "status": "PASS",
+      "elapsed_seconds": 27.36487627029419,
+      "max_rss_kib": 109382924
+    }
+  ],
+  "selected_configuration": {
+    "DIM": 4,
+    "N": 71,
+    "N_REQUESTED": 71,
+    "MANUAL_MEMORY_BUDGET_GIB": 160.0,
+    "R_BUBBLE": 3.0,
+    "SIGMA": 1.0,
+    "V_S": 0.5,
+    "EXTENT": 5.0,
+    "T_EXTENT": 0.4,
+    "DELTA_TAU": 0.08,
+    "INTERIOR_CROP": 3
+  },
+  "metrics": {
+    "relative_Bianchi_residual": 0.004538437626932157,
+    "rho_relative_peak_error": 0.037033850908382716,
+    "Hessian_Q_normalized_residual": 0.015538146774409704,
+    "HTR_normalized_residual": 0.012696070421121537,
+    "lambda_fit": 0.016040293872608795,
+    "beta_fit": -1.034302023799197,
+    "action_over_fit": 1.0000042943090572,
+    "action_fit_tensor_difference_percent": 0.02947040307234202,
+    "action_residual_penalty_percent": 0.0004294309057240042,
+    "HTR_improvement_over_H": 0.4301508039825145
+  },
+  "finished_utc": "2026-07-16T23:48:48Z",
+  "max_rss_kib": 109382924,
+  "run_status": "PASS"
+}

@@ -1,0 +1,54 @@
+===== STAGE 4 N71 DELTA_TAU MATRIX =====
+Matrix directory: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346
+Existing baseline DELTA_TAU=0.04: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_revalidation_N71_20260716_111107
+New case DELTA_TAU=0.02: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p02
+New case DELTA_TAU=0.08: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p08
+Cases run sequentially.
+
+===== START DELTA_TAU=0.02 =====
+Output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p02
+Log: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p02/stage4_n71_dtau_0p02.run.log
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p02
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p02/stage4_n71_dtau_0p02.run.log
+DELTA_TAU=0.02 RESULT=PASS
+
+===== START DELTA_TAU=0.08 =====
+Output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p08
+Log: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p08/stage4_n71_dtau_0p08.run.log
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p08
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/dtau_0p08/stage4_n71_dtau_0p08.run.log
+DELTA_TAU=0.08 RESULT=PASS
+
+===== POSTPROCESS MATRIX =====
+===== STAGE 4 N71 DELTA_TAU SENSITIVITY MATRIX =====
+DELTA_TAU values: 0.02, 0.04, 0.08
+
+relative_Bianchi_residual: 0.02=0.0045384376269321574 0.04=0.0045384376269321574 0.08=0.0045384376269321574 fine_change=0.0% coarse_change=0.0% raw_order=None fit_status=NONMONOTONIC_OR_DEGENERATE
+rho_relative_peak_error: 0.02=0.037033850908382716 0.04=0.037033850908382716 0.08=0.037033850908382716 fine_change=0.0% coarse_change=0.0% raw_order=None fit_status=NONMONOTONIC_OR_DEGENERATE
+Hessian_Q_normalized_residual: 0.02=0.01554677525624942 0.04=0.015545047560557315 0.08=0.015538146774409704 fine_change=0.011114122908753948% coarse_change=-0.044392184203544516% raw_order=1.9979115945668064 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+HTR_normalized_residual: 0.02=0.012707843162109761 0.04=0.012705486513730447 0.08=0.012696070421121537 fine_change=0.018548273431066593% coarse_change=-0.07411044511152223% raw_order=1.9983919904134133 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+lambda_fit: 0.02=0.016048668608995259 0.04=0.016046992783419523 0.08=0.016040293872608795 fine_change=0.010443237548329792% coarse_change=-0.0417455837435782% raw_order=1.999054546556795 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+beta_fit: 0.02=-1.0342945160505408 0.04=-1.0342960186715253 0.08=-1.0343020237991969 fine_change=0.0001452795870236587% coarse_change=-0.0005806004821795854% raw_order=1.9987137634038366 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+action_over_fit: 0.02=1.0000039506347518 0.04=1.0000040192679722 0.08=1.0000042943090572 fine_change=-6.8632944586065756e-06% coarse_change=2.7503997955892068e-05% raw_order=2.00266818507538 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+action_fit_tensor_difference_percent: 0.02=0.029447829361768825 0.04=0.029452344399313043 0.08=0.02947040307234202 fine_change=-0.01532997673463006% coarse_change=0.061314891555454096% raw_order=1.9998819964908727 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+action_residual_penalty_percent: 0.02=0.00039506347517814788 0.04=0.00040192679722217406 0.08=0.00042943090572400422 fine_change=-1.7076049896300698% coarse_change=6.843064133050738% raw_order=2.00266818507538 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+HTR_improvement_over_H: 0.02=0.43018674559742853 0.04=0.4301795516876008 0.08=0.43015080398251448 fine_change=0.00167230399481049% coarse_change=-0.006682722359428899% raw_order=1.9985988098956384 fit_status=PROVISIONAL_THREE_STEP_EXTRAPOLATION
+
+Principal fine-step maximum change: 0.018548273%
+Principal coarse-step maximum change: 0.074110445%
+Coefficient fine-step maximum change: 0.010443238%
+Tensor fine-step change: 0.015329977%
+Action/Fit fine-step absolute change: 0.06863322 ppm
+
+PHASE2_RECOMMENDATION=N81_DTAU_0P02_CONFIRMATION_ONLY
+PHASE2_RATIONALE=The fine-step N71 changes are small; confirm only DELTA_TAU=0.02 at N81.
+STAGE4_N71_DELTA_TAU_MATRIX_RESULT=PASS
+PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346.zip
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346.zip
+
+STAGE4_N71_DELTA_TAU_WRAPPER_RESULT=PASS
+REPORT=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346/stage4_n71_delta_tau_matrix_report.txt
+PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346.zip
+MATRIX_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n71_delta_tau_matrix_20260716_194346

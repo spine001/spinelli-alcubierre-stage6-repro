@@ -1,63 +1,42 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
-**Status date:** 2026-07-16  
-**Current published baseline before this update:** `1afef02806d804baf1f656e97adb96b2434fd4dc`  
+**Status date:** 2026-07-17  
+**Current repository baseline before this update:** `5bd579b6e2324fb535ca322be3bf74f90a194768`  
 **Authoritative Stage 4 notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
-## Publication state
+## Completed Stage 4R evidence
 
-Stage 4R N81 was published successfully in commit
-`1afef02806d804baf1f656e97adb96b2434fd4dc`.
+- N61 exact terminal regression: PASS
+- N71 intermediate resolution: PASS
+- N81 dense resolution: PASS
+- N61/N71/N81 corrected three-grid analysis: published
+- N71 DELTA_TAU=0.02/0.04/0.08 matrix: PASS
 
-## Stage 4R N71
+## Proper-time sensitivity conclusion
 
-N71 completed successfully using the same physical parameters as N61 and N81.
+At N71, the maximum fine-step effect on the principal diagnostics was only
+0.0185483%. Fitted coefficients changed by at most 0.0104432%,
+the tensor comparison changed by 0.01533%, and Action/Fit moved by only
+0.0686332 ppm.
 
-- DIM=4, N=71
-- Runtime: 151.29 seconds
-- Peak RSS: 104.316132 GiB
-- Swap: 0
-- All notebook cells: PASS
-- Historical notebook modified on disk: no
+The changing quantities show approximately second-order DELTA_TAU behavior. Bianchi and
+the classical rho benchmark are invariant under this parameter in the current notebook
+implementation.
 
-## Corrected three-grid interpretation
+## Current next run
 
-The principal residuals decrease monotonically from N61 to N71 to N81.
+Execute one controlled N81/DELTA_TAU=0.02 confirmation.
 
-- Bianchi pairwise orders:
-  1.845,
-  1.882
-- Classical rho error pairwise orders:
-  1.901,
-  1.939
-- Hessian-Q pairwise orders:
-  1.276,
-  1.015
-- HTR pairwise orders:
-  1.740,
-  1.614
+The post-run report compares:
 
-The negative continuum values generated for Bianchi and rho by the original unconstrained
-three-point fit are rejected as physically inadmissible for nonnegative quantities.
-Original reports remain preserved for provenance.
+1. N71: DELTA_TAU=0.02 versus 0.04
+2. N81: DELTA_TAU=0.02 versus 0.04
+3. Spatial N71→N81 changes at both DELTA_TAU values
+4. Proper-time sensitivity relative to the spatial-resolution effect
 
-## Resource model
+## Decision after N81 confirmation
 
-The N^4 model predicted N71 peak RSS within 0.155% and runtime within
-0.870%. It is the operative resource model for dense Stage 4 runs.
+- Small sensitivity: begin measured-memory optimization for N91.
+- Unexpected sensitivity: run N81/DELTA_TAU=0.08 before optimization.
 
-## Next numerical task
-
-Proper-time-step sensitivity at fixed N71:
-
-- DELTA_TAU = 0.02
-- DELTA_TAU = 0.04
-- DELTA_TAU = 0.08
-
-The sensitivity matrix should run each case in a separate Python process and compare
-Bianchi, rho error, Hessian-Q, HTR, lambda, beta, Action/Fit, and tensor difference.
-
-## Preservation rule
-
-Historical artifacts remain immutable. Raw N71 reports, including the original
-three-point extrapolation, remain published beside this corrected interpretation.
+N91 and N101 are roadmap targets, but are not started by this package.

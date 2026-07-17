@@ -62,19 +62,16 @@ Then use the scripts in run_scripts/, or call the Python scripts directly.
 https://github.com/spine001/spinelli-alcubierre-stage6-repro
 
 <!-- N301_V1_STATUS_START -->
-## Current validation status — 2026-07-16
+## Current validation status — 2026-07-17
 
-Stage 4R now has verified N61, N71, and N81 results. The principal Bianchi, classical rho,
-Hessian-Q, and HTR diagnostics decrease monotonically. Adjacent-grid effective orders for
-Bianchi and rho are stable and close to two.
+Stage 4R has verified N61, N71, and N81 spatial results. The N71 proper-time-step matrix
+at `DELTA_TAU = 0.02, 0.04, 0.08` also passed. Its changing quantities display
+approximately second-order step sensitivity, while the maximum fine-step change among
+the principal diagnostics is below 0.019%.
 
-The original unconstrained three-point postprocessor generated negative continuum limits
-for two nonnegative error metrics. Those extrapolations are retained as raw provenance
-but rejected in the corrected analysis.
+The next run is one N81/`DELTA_TAU=0.02` confirmation. Its report will decide whether to
+begin measured-memory optimization for N91 or obtain the missing N81/0.08 point first.
 
-The next numerical task is fixed-N71 proper-time-step sensitivity at
-`DELTA_TAU = 0.02, 0.04, 0.08`.
-
-See `docs/PROJECT_STATUS.md`, the corrected three-grid analysis, and the latest
-self-contained HTML under `article/`.
+See `docs/PROJECT_STATUS.md`, the N71 proper-time analysis, and the latest self-contained
+master HTML under `article/`.
 <!-- N301_V1_STATUS_END -->

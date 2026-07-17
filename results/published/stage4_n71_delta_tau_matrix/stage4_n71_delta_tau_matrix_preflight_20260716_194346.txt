@@ -1,0 +1,29 @@
+===== STAGE 4 N71 DELTA_TAU MATRIX PREFLIGHT =====
+Generated: 2026-07-16T19:43:46-04:00
+HEAD: 5bd579b6e2324fb535ca322be3bf74f90a194768
+Notebook patch anchors: PASS
+
+===== MEMORY =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.5Gi       226Gi       172Mi        13Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+Available RAM GiB: 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Swap occupancy is informational.
+
+===== STORAGE =====
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Free filesystem GiB: 537
+
+===== HEAVY PROCESS CHECK =====
+No matching heavy Python computation detected.
+
+===== EXPECTED RESOURCES =====
+New cases: DELTA_TAU=0.02 and 0.08
+Existing baseline reused: DELTA_TAU=0.04
+Each new case projected peak RSS: approximately 104.5 GiB
+Each new case projected runtime: approximately 151 seconds
+Cases execute sequentially in separate Python processes.
+
+PREFLIGHT_RESULT=PASS
