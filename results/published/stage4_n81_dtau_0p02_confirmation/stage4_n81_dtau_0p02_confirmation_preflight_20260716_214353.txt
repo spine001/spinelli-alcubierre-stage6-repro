@@ -1,0 +1,27 @@
+===== STAGE 4 N81 DELTA_TAU=0.02 CONFIRMATION PREFLIGHT =====
+Generated: 2026-07-16T21:43:53-04:00
+HEAD: b8f364464b94ffb3eaf89decff45331f662fbd0b
+Notebook patch anchors: PASS
+
+===== MEMORY =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.5Gi       226Gi       199Mi        14Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+Available RAM GiB: 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Swap occupancy is informational.
+
+===== STORAGE =====
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Free filesystem GiB: 537
+
+===== HEAVY PROCESS CHECK =====
+No matching heavy Python computation detected.
+
+===== EXPECTED RESOURCES =====
+Projected peak RSS: approximately 177 GiB
+Projected runtime: approximately 255 seconds
+This is one N81 confirmation case, not a full matrix.
+
+PREFLIGHT_RESULT=PASS

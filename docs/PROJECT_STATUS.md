@@ -1,42 +1,41 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
 **Status date:** 2026-07-17  
-**Current repository baseline before this update:** `5bd579b6e2324fb535ca322be3bf74f90a194768`  
+**Current repository baseline before this update:** `b8f364464b94ffb3eaf89decff45331f662fbd0b`  
 **Authoritative Stage 4 notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
-## Completed Stage 4R evidence
+## Completed
 
-- N61 exact terminal regression: PASS
-- N71 intermediate resolution: PASS
-- N81 dense resolution: PASS
-- N61/N71/N81 corrected three-grid analysis: published
+- Stage 4R N61 exact regression: PASS
+- Stage 4R N71: PASS
+- Stage 4R N81: PASS
+- Corrected N61/N71/N81 spatial analysis: published
 - N71 DELTA_TAU=0.02/0.04/0.08 matrix: PASS
+- N81 DELTA_TAU=0.02 confirmation: PASS
 
-## Proper-time sensitivity conclusion
+## Proper-time conclusion
 
-At N71, the maximum fine-step effect on the principal diagnostics was only
-0.0185483%. Fitted coefficients changed by at most 0.0104432%,
-the tensor comparison changed by 0.01533%, and Action/Fit moved by only
-0.0686332 ppm.
+At N81, the largest principal-metric change from DELTA_TAU=0.04 to 0.02 was
+0.0161359%. The largest proper-time effect was only
+0.0670812% of its corresponding N71-to-N81 spatial effect.
 
-The changing quantities show approximately second-order DELTA_TAU behavior. Bianchi and
-the classical rho benchmark are invariant under this parameter in the current notebook
-implementation.
+The next task is therefore memory optimization for N91, not another DELTA_TAU case.
 
-## Current next run
+## Current validation gate
 
-Execute one controlled N81/DELTA_TAU=0.02 confirmation.
+Run a streaming late-cell implementation at N61 and N81 in separate Python processes.
 
-The post-run report compares:
+The gate requires:
 
-1. N71: DELTA_TAU=0.02 versus 0.04
-2. N81: DELTA_TAU=0.02 versus 0.04
-3. Spatial N71→N81 changes at both DELTA_TAU values
-4. Proper-time sensitivity relative to the spatial-resolution effect
+1. All executable cells PASS.
+2. Six canonical tables reproduce within `rtol=1e-8`, `atol=1e-10`.
+3. No swap.
+4. Measured N81 peak projects N91 below 190 GiB.
+5. Historical notebook remains unchanged.
 
-## Decision after N81 confirmation
+Only a passing gate authorizes construction of the N91 production runner.
 
-- Small sensitivity: begin measured-memory optimization for N91.
-- Unexpected sensitivity: run N81/DELTA_TAU=0.08 before optimization.
+## N101
 
-N91 and N101 are roadmap targets, but are not started by this package.
+N101 remains a later target. Its feasibility will be recalculated from the optimized N81
+peak and then checked again after the measured N91 run.

@@ -1,0 +1,19 @@
+===== STAGE 4 N81 DELTA_TAU=0.02 CASE =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+Selected N: 81
+Selected DELTA_TAU: 0.02
+
+===== METRICS =====
+relative_Bianchi_residual: 0.0035299983833249567
+rho_relative_peak_error: 0.028586695368057888
+Hessian_Q_normalized_residual: 0.013575511919485674
+HTR_normalized_residual: 0.010243528374845235
+lambda_fit: 0.016229173607843074
+beta_fit: -1.0365116714799611
+action_over_fit: 1.0000243158036328
+action_fit_tensor_difference_percent: 0.030528168995825212
+action_residual_penalty_percent: 0.0024315803632823929
+HTR_improvement_over_H: 0.43279045945005734
+
+STAGE4_N81_DTAU_0P02_CASE_RESULT=PASS

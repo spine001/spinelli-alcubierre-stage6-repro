@@ -1,0 +1,20 @@
+===== STAGE 4 STREAMING OPTIMIZATION SMOKE TEST =====
+Date: 2026-07-17
+Grid: DIM=4, N=9
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+
+The original notebook and the streaming implementation were executed independently.
+The optimized output was compared with the original output using:
+rtol=1e-8
+atol=1e-10
+
+stage4A: PASS, max_abs=0
+stage4B: PASS, max_abs=0
+stage4C_fit: PASS, max_abs=0
+stage4C_ranking: PASS, max_abs=0
+stage4D_comparison: PASS, max_abs=1.7352785874891197e-13
+stage4D_summary: PASS, max_abs=1.2975731600306517e-15
+
+Peak RSS for the optimized N9 smoke run: 0.558044434 GiB
+
+STAGE4_STREAMING_OPTIMIZATION_SMOKETEST_RESULT=PASS

@@ -1,0 +1,172 @@
+
+===== EXECUTE NOTEBOOK CELL 0001 =====
+NumPy: 2.5.1
+Pandas: 3.0.3
+SciPy available: True
+
+===== EXECUTE NOTEBOOK CELL 0003 =====
+DIM = 4
+Requested N cap = 81
+Manual memory budget = 220.0 GiB
+Estimated scalar fields = 260
+Largest RAM-safe N selected = 81
+Estimated full-run footprint at N=81: 83.39 GiB
+Estimated full-run footprint at requested N=81: 83.39 GiB
+
+===== EXECUTE NOTEBOOK CELL 0005 =====
+
+===== EXECUTE NOTEBOOK CELL 0007 =====
+
+===== EXECUTE NOTEBOOK CELL 0009 =====
+Building geometry with dim=4, N=81
+Estimated full-run footprint: 83.39 GiB
+Built geometry: 4 81 (81, 81, 81, 81)
+
+===== EXECUTE NOTEBOOK CELL 0011 =====
+||G^a_b||_2 = 0.07291866101835494
+||nabla_a G^a_b||_2 = 0.0002574027555090135
+relative Bianchi residual = 0.0035299983833249567
+
+===== EXECUTE NOTEBOOK CELL 0012 =====
+
+===== EXECUTE NOTEBOOK CELL 0014 =====
+Hessian Q ||Q||: 0.021108625617368374
+Hessian Q ||div Q||: 0.000286560398672545
+C/Q: 0.013575511919485674
+
+===== EXECUTE NOTEBOOK CELL 0015 =====
+
+===== EXECUTE NOTEBOOK CELL 0017 =====
+lambda_fit = 0.016229173607843074
+beta_fit = -1.0365116714799611
+fit residual ratio = 0.5672095405499427
+
+===== EXECUTE NOTEBOOK CELL 0018 =====
+
+===== EXECUTE NOTEBOOK CELL 0019 =====
+
+===== EXECUTE NOTEBOOK CELL 0021 =====
+
+===== EXECUTE NOTEBOOK CELL 0023 =====
+Exporting Stage 4 outputs for DIM=4, N=81
+Export directory: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4_dim4_article_exports
+Stage 4A exports...
+Stage 4B exports...
+Stage 4C analytic residual exports...
+Stage 4C direct candidate ranking exports...
+Computing direct candidate: H
+  done in 11.4 s, C/Q=0.0135755
+Computing direct candidate: HT lambda_fit=0.0162292
+  done in 12.2 s, C/Q=0.0131857
+Computing direct candidate: R beta_fit=-1.03651
+  done in 12.3 s, C/Q=0.0104259
+Computing direct candidate: HTR lambda_fit=0.0162292, beta_fit=-1.03651
+  done in 13.1 s, C/Q=0.0102435
+Best direct candidate: HTR lambda_fit=0.0162292, beta_fit=-1.03651
+
+EXPORT COMPLETE
+Folder: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4_dim4_article_exports
+ZIP: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4_dim4_article_exports.zip
+
+Please upload this ZIP file back here:
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4_dim4_article_exports.zip
+   DIM   N    dt     dx     dy     dz      G_L2   divG_L2  relative_Bianchi_residual  rho_num_min   rho_num_max  rho_A_min  rho_A_max  rho_relative_peak_error
+0    4  81  0.01  0.125  0.125  0.125  0.072919  0.000257                    0.00353    -0.000613 -8.612073e-12  -0.000624       -0.0                 0.028587
+   DIM   N      Q_L2      C_L2  normalized_Q_conservation_residual    S_peak  Q00_peak_abs    C_peak
+0    4  81  0.021109  0.000287                            0.013576  0.009355      0.124045  0.003433
+   DIM   N  lambda_fit  beta_fit  residual_H  residual_HT_lambda_fit  residual_R_beta_fit  residual_HTR_lambda_beta_fit  improvement_HT_over_H  improvement_R_over_H  improvement_HTR_over_H
+0    4  81    0.016229 -1.036512    0.000118                0.000112             0.000072                      0.000067               0.054404              0.388989                 0.43279
+                                     candidate    lambda      beta      Q_L2      C_L2  C_over_Q  normalized_residual  rank
+0  HTR lambda_fit=0.0162292, beta_fit=-1.03651  0.016229 -1.036512  0.021118  0.000216  0.010244             0.010244     1
+1                          R beta_fit=-1.03651  0.000000 -1.036512  0.021137  0.000220  0.010426             0.010426     2
+2                      HT lambda_fit=0.0162292  0.016229  0.000000  0.021089  0.000278  0.013186             0.013186     3
+3                                            H  0.000000  0.000000  0.021109  0.000287  0.013576             0.013576     4
+
+===== EXECUTE NOTEBOOK CELL 0024 =====
+Stage 4D action-derived Q comparison
+lambda_fit  = 0.016229173607843074
+beta_fit    = -1.0365116714799611
+beta_action = -1.0
+                       case    lambda      beta      Q_L2      C_L2  normalized_residual  relative_tensor_difference_vs_fit
+0           Best fitted HTR  0.016229 -1.036512  0.021118  0.000216             0.010244                           0.000000
+1  Action-predicted beta=-1  0.016229 -1.000000  0.021117  0.000216             0.010244                           0.000305
+2   Difference action - fit       NaN  0.036512  0.000006  0.000006             0.973048                           0.000305
+
+Key interpretation numbers
+Relative tensor difference action vs fit: 0.0305%
+Action residual / fitted residual: 1.000024
+Residual penalty of action tensor: 0.0024%
+
+EXPORT COMPLETE
+Folder: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4D_action_Q_comparison_exports
+ZIP: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4D_action_Q_comparison_exports.zip
+
+Upload this ZIP back here so I can update the HTML article:
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4D_action_Q_comparison_exports.zip
+===== STAGE 4 N81 DELTA_TAU=0.02 CASE =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+Selected N: 81
+Selected DELTA_TAU: 0.02
+
+===== METRICS =====
+relative_Bianchi_residual: 0.0035299983833249567
+rho_relative_peak_error: 0.028586695368057888
+Hessian_Q_normalized_residual: 0.013575511919485674
+HTR_normalized_residual: 0.010243528374845235
+lambda_fit: 0.016229173607843074
+beta_fit: -1.0365116714799611
+action_over_fit: 1.0000243158036328
+action_fit_tensor_difference_percent: 0.030528168995825212
+action_residual_penalty_percent: 0.0024315803632823929
+HTR_improvement_over_H: 0.43279045945005734
+
+STAGE4_N81_DTAU_0P02_CASE_RESULT=PASS
+	Command being timed: "nice -n 5 ionice -c2 -n7 /home/julio/.venvs/spinelli-stage4-n61/bin/python scripts/run_stage4_n81_dtau_0p02_confirmation.py --repo /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro --output-dir /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353"
+	User time (seconds): 200.79
+	System time (seconds): 62.85
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:14.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 185572108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6162448
+	Voluntary context switches: 160
+	Involuntary context switches: 2076
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5640
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_n81_dtau_0p02_confirmation_20260716_214353/stage4_n81_dtau_0p02_confirmation.run.log
+===== STAGE 4 N81 DELTA_TAU=0.02 CONFIRMATION =====
+
+relative_Bianchi_residual: N71_0.02=0.0045384376269321574 N71_0.04=0.0045384376269321574 N81_0.02=0.0035299983833249567 N81_0.04=0.0035299983833249567 N81_fine_change=0.0% dtau_to_spatial=0.0
+rho_relative_peak_error: N71_0.02=0.037033850908382716 N71_0.04=0.037033850908382716 N81_0.02=0.028586695368057888 N81_0.04=0.028586695368057888 N81_fine_change=0.0% dtau_to_spatial=0.0
+Hessian_Q_normalized_residual: N71_0.02=0.01554677525624942 N71_0.04=0.015545047560557315 N81_0.02=0.013575511919485674 N81_0.04=0.013574498106398779 N81_fine_change=0.007468512492672979% dtau_to_spatial=0.0005144824377559041
+HTR_normalized_residual: N71_0.02=0.012707843162109761 N71_0.04=0.012705486513730447 N81_0.02=0.010243528374845235 N81_0.04=0.010241875755526996 N81_fine_change=0.016135904766729662% dtau_to_spatial=0.0006708118613038353
+lambda_fit: N71_0.02=0.016048668608995259 N71_0.04=0.016046992783419523 N81_0.02=0.016229173607843074 N81_0.04=0.016227418581089042 N81_fine_change=0.010815193712186557% dtau_to_spatial=0.009727138672523832
+beta_fit: N71_0.02=-1.0342945160505408 N71_0.04=-1.0342960186715253 N81_0.02=-1.0365116714799611 N81_0.04=-1.0365130131338942 N81_fine_change=0.00012943917886818577% dtau_to_spatial=0.0006051679225345584
+action_over_fit: N71_0.02=1.0000039506347518 N71_0.04=1.0000040192679722 N81_0.02=1.0000243158036328 N81_0.04=1.0000244510928271 N81_fine_change=-1.352858864040766e-05% dtau_to_spatial=0.006621493442346021
+action_fit_tensor_difference_percent: N71_0.02=0.029447829361768825 N71_0.04=0.029452344399313043 N81_0.02=0.030528168995825212 N81_0.04=0.030532788698467608 N81_fine_change=-0.015130300373212736% dtau_to_spatial=0.00427574345666071
+action_residual_penalty_percent: N71_0.02=0.00039506347517814788 N71_0.04=0.00040192679722217406 N81_0.02=0.0024315803632823929 N81_0.04=0.0024451092827115772 N81_fine_change=-0.5533053072450417% dtau_to_spatial=0.006621493442346021
+HTR_improvement_over_H: N71_0.02=0.43018674559742853 N71_0.04=0.4301795516876008 N81_0.02=0.43279045945005734 N81_0.04=0.43278263332828171 N81_fine_change=0.0018083262064948163% dtau_to_spatial=0.00300648341309286
+
+N81 principal fine-step maximum change: 0.0161359048%
+N81 coefficient fine-step maximum change: 0.0108151937%
+N81 tensor fine-step change: 0.0151303004%
+N81 Action/Fit absolute change: 0.135289194 ppm
+Maximum principal DELTA_TAU/spatial effect ratio: 0.000670811861
+
+PHASE3_RECOMMENDATION=BEGIN_MEMORY_OPTIMIZATION_FOR_N91
+PHASE3_RATIONALE=N81 fine-step sensitivity is small and remains subordinate to the N71-to-N81 spatial-resolution effect.
+STAGE4_N81_DELTA_TAU_CONFIRMATION_RESULT=PASS

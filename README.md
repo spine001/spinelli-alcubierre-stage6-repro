@@ -64,14 +64,14 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-17
 
-Stage 4R has verified N61, N71, and N81 spatial results. The N71 proper-time-step matrix
-at `DELTA_TAU = 0.02, 0.04, 0.08` also passed. Its changing quantities display
-approximately second-order step sensitivity, while the maximum fine-step change among
-the principal diagnostics is below 0.019%.
+Stage 4R N61, N71, and N81 spatial results pass. The N71 proper-time matrix and the
+N81/`DELTA_TAU=0.02` confirmation also pass. At N81, the largest principal fine-step
+change is below 0.017% and remains far below the spatial-resolution effect.
 
-The next run is one N81/`DELTA_TAU=0.02` confirmation. Its report will decide whether to
-begin measured-memory optimization for N91 or obtain the missing N81/0.08 point first.
+The current task is a memory-profiled streaming regression at N61 and N81. It removes
+late export/action tensor accumulation while preserving the six canonical tables.
+Only a passing regression and an N91 projection below 190 GiB authorize the N91 runner.
 
-See `docs/PROJECT_STATUS.md`, the N71 proper-time analysis, and the latest self-contained
-master HTML under `article/`.
+See `docs/PROJECT_STATUS.md`, the N81 confirmation analysis, the N91 memory-validation
+plan, and the latest self-contained HTML under `article/`.
 <!-- N301_V1_STATUS_END -->
