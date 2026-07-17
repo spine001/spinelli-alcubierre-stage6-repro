@@ -1,0 +1,29 @@
+===== STAGE 4 MEMORY OPTIMIZATION VALIDATION PREFLIGHT =====
+Generated: 2026-07-16T22:50:10-04:00
+HEAD: 5ec5b066adaa77b4da117ab8122e74b51a7f7f9b
+Notebook and target cell hashes: PASS
+
+===== MEMORY =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.5Gi       226Gi       226Mi        14Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+Available RAM GiB: 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Swap occupancy is informational.
+
+===== STORAGE =====
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Free filesystem GiB: 537
+
+===== HEAVY PROCESS CHECK =====
+No matching heavy Python computation detected.
+
+===== VALIDATION PLAN =====
+Case 1: optimized N61 versus verified N61
+Case 2: optimized N81 versus verified N81
+Cases run sequentially in separate Python processes.
+Canonical table tolerance: rtol=1e-8, atol=1e-10
+N91 gate: optimized N81 projection <= 190 GiB
+
+PREFLIGHT_RESULT=PASS

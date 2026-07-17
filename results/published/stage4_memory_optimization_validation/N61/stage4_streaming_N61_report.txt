@@ -1,0 +1,16 @@
+===== STAGE 4 STREAMING EXPORT REGRESSION N=61 =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+Selected N: 61
+Selected DELTA_TAU: 0.04
+Peak RSS GiB: 29.643741608
+
+===== CANONICAL TABLE COMPARISON =====
+stage4A: status=PASS max_abs=0 max_rel=0 outside=0 text=0
+stage4B: status=PASS max_abs=0 max_rel=0 outside=0 text=0
+stage4C_fit: status=PASS max_abs=0 max_rel=0 outside=0 text=0
+stage4C_ranking: status=PASS max_abs=0 max_rel=0 outside=0 text=0
+stage4D_comparison: status=PASS max_abs=3.5527136788005009e-15 max_rel=3.7785762190631455e-15 outside=0 text=0
+stage4D_summary: status=PASS max_abs=0 max_rel=0 outside=0 text=0
+
+STAGE4_STREAMING_EXPORT_REGRESSION_RESULT=PASS

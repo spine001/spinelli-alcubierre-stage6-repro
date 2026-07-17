@@ -1,0 +1,39 @@
+{
+  "validation_status": "PASS",
+  "baseline_peak_rss_kib": {
+    "N61": 59516844,
+    "N81": 185580896
+  },
+  "optimized_peak_rss_kib": {
+    "N61": 31083716,
+    "N81": 97203164
+  },
+  "memory_reduction_percent": {
+    "N61": 47.7732455034074,
+    "N81": 47.62221430378265
+  },
+  "projected_peak_rss_gib": {
+    "N91": 147.67466083915258,
+    "N101": 224.09177052920535
+  },
+  "time_logs": {
+    "N61": {
+      "maximum_resident_set_size_kib": 31083716,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    "N81": {
+      "maximum_resident_set_size_kib": 97203164,
+      "swaps": 0,
+      "exit_status": 0
+    }
+  },
+  "gates": {
+    "regression_pass": true,
+    "process_exit_and_swap_pass": true,
+    "N91_projected_peak_at_most_190_gib": true
+  },
+  "phase4_recommendation": "BUILD_N91_OPTIMIZED_RUNNER",
+  "phase4_rationale": "Both canonical regressions passed without swap and the optimized N81 peak projects N91 below 190 GiB.",
+  "N101_outlook": "REQUIRES_FURTHER_OPTIMIZATION_OR_MORE_RAM"
+}

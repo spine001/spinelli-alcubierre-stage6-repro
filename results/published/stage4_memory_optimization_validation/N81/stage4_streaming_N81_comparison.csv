@@ -1,0 +1,7 @@
+table,relative_path,shape_produced,shape_reference,columns_match,max_abs_difference,max_relative_difference,numeric_outside_tolerance,text_mismatches,status
+stage4A,stage4_dim4_article_exports/stage4A_dim4_bianchi_validation.csv,"[1, 14]","[1, 14]",True,0.0,0.0,0,0,PASS
+stage4B,stage4_dim4_article_exports/stage4B_dim4_hessian_Q_proxy.csv,"[1, 8]","[1, 8]",True,0.0,0.0,0,0,PASS
+stage4C_fit,stage4_dim4_article_exports/stage4C_dim4_fit_parameters.csv,"[1, 11]","[1, 11]",True,0.0,0.0,0,0,PASS
+stage4C_ranking,stage4_dim4_article_exports/stage4C_dim4_candidate_ranking.csv,"[4, 8]","[4, 8]",True,0.0,0.0,0,0,PASS
+stage4D_comparison,stage4D_action_Q_comparison_exports/stage4D_action_vs_fitted_Q_comparison.csv,"[3, 7]","[3, 7]",True,2.220446049250313e-16,2.7009723968582155e-16,0,0,PASS
+stage4D_summary,stage4D_action_Q_comparison_exports/stage4D_action_vs_fitted_Q_summary.csv,"[1, 11]","[1, 11]",True,0.0,0.0,0,0,PASS

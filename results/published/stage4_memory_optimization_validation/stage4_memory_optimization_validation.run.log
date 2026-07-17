@@ -1,0 +1,44 @@
+===== STAGE 4 MEMORY OPTIMIZATION VALIDATION =====
+Root: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010
+N61 output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N61
+N81 output: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N81
+
+===== START OPTIMIZED N61 =====
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N61
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N61/stage4_streaming_N61.run.log
+OPTIMIZED_N61_RESULT=PASS
+
+===== START OPTIMIZED N81 =====
+RUN_EXIT_CODE=0
+OUTPUT_DIR=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N81
+LOG=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/N81/stage4_streaming_N81.run.log
+OPTIMIZED_N81_RESULT=PASS
+
+===== POSTPROCESS MEMORY GATE =====
+===== STAGE 4 MEMORY OPTIMIZATION VALIDATION =====
+N61: baseline=56.759686 GiB optimized=29.643742 GiB reduction=47.773246%
+N81: baseline=176.983734 GiB optimized=92.700161 GiB reduction=47.622214%
+Projected N91 peak: 147.674661 GiB
+Projected N101 peak: 224.091771 GiB
+N101_OUTLOOK=REQUIRES_FURTHER_OPTIMIZATION_OR_MORE_RAM
+
+PHASE4_RECOMMENDATION=BUILD_N91_OPTIMIZED_RUNNER
+PHASE4_RATIONALE=Both canonical regressions passed without swap and the optimized N81 peak projects N91 below 190 GiB.
+STAGE4_MEMORY_OPTIMIZATION_VALIDATION_RESULT=PASS
+===== STAGE 4 MEMORY OPTIMIZATION VALIDATION =====
+N61: baseline=56.759686 GiB optimized=29.643742 GiB reduction=47.773246%
+N81: baseline=176.983734 GiB optimized=92.700161 GiB reduction=47.622214%
+Projected N91 peak: 147.674661 GiB
+Projected N101 peak: 224.091771 GiB
+N101_OUTLOOK=REQUIRES_FURTHER_OPTIMIZATION_OR_MORE_RAM
+
+PHASE4_RECOMMENDATION=BUILD_N91_OPTIMIZED_RUNNER
+PHASE4_RATIONALE=Both canonical regressions passed without swap and the optimized N81 peak projects N91 below 190 GiB.
+STAGE4_MEMORY_OPTIMIZATION_VALIDATION_RESULT=PASS
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010.zip
+
+STAGE4_MEMORY_OPTIMIZATION_WRAPPER_RESULT=PASS
+REPORT=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010/stage4_memory_optimization_validation_report.txt
+PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010.zip
+ROOT=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_memory_optimization_validation_20260716_225010

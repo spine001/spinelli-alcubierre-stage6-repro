@@ -1,41 +1,49 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
 **Status date:** 2026-07-17  
-**Current repository baseline before this update:** `b8f364464b94ffb3eaf89decff45331f662fbd0b`  
-**Authoritative Stage 4 notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
+**Current repository baseline before this update:** `5ec5b066adaa77b4da117ab8122e74b51a7f7f9b`  
+**Authoritative notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
-## Completed
+## Completed evidence
 
-- Stage 4R N61 exact regression: PASS
-- Stage 4R N71: PASS
-- Stage 4R N81: PASS
-- Corrected N61/N71/N81 spatial analysis: published
-- N71 DELTA_TAU=0.02/0.04/0.08 matrix: PASS
-- N81 DELTA_TAU=0.02 confirmation: PASS
+- N61 exact regression: PASS
+- N71 intermediate grid: PASS
+- N81 dense grid: PASS
+- N61/N71/N81 spatial analysis: published
+- N71 proper-time matrix: PASS
+- N81 proper-time confirmation: PASS
+- Streaming-memory N61 regression: PASS
+- Streaming-memory N81 regression: PASS
 
-## Proper-time conclusion
+## Memory result
 
-At N81, the largest principal-metric change from DELTA_TAU=0.04 to 0.02 was
-0.0161359%. The largest proper-time effect was only
-0.0670812% of its corresponding N71-to-N81 spatial effect.
+The streaming implementation reduces peak RSS by approximately 47.7% while preserving
+all six canonical tables.
 
-The next task is therefore memory optimization for N91, not another DELTA_TAU case.
+- Optimized N61 peak: 29.643742 GiB
+- Optimized N81 peak: 92.700161 GiB
+- Projected N91 peak: 147.674661 GiB
+- Projected N101 peak: 224.091771 GiB
 
-## Current validation gate
+## Current task
 
-Run a streaming late-cell implementation at N61 and N81 in separate Python processes.
+Run the authorized optimized N91 calculation at DELTA_TAU=0.04.
 
-The gate requires:
+The N91 postprocessor will:
 
-1. All executable cells PASS.
-2. Six canonical tables reproduce within `rtol=1e-8`, `atol=1e-10`.
-3. No swap.
-4. Measured N81 peak projects N91 below 190 GiB.
-5. Historical notebook remains unchanged.
+1. Create the N61/N71/N81/N91 metric sequence.
+2. Compute adjacent-grid effective orders.
+3. Verify that the four principal residuals continue decreasing.
+4. Compare measured N91 memory and runtime with their projections.
+5. Recalculate N101 memory from the measured N91 peak.
+6. Emit the Phase 5 recommendation.
 
-Only a passing gate authorizes construction of the N91 production runner.
+## N101 gate
 
-## N101
+N101 is built only when:
 
-N101 remains a later target. Its feasibility will be recalculated from the optimized N81
-peak and then checked again after the measured N91 run.
+- N91 completes without swap;
+- the principal spatial trends remain valid; and
+- the measured N91 peak projects N101 at no more than 205 GiB.
+
+Otherwise the next step is another focused memory optimization.
