@@ -64,14 +64,18 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-18
 
-N111 completed successfully with 238.24 GiB peak RSS, 75.53 GiB peak
-process swap, and monotonic principal diagnostics across six grids.
+N121 and N131 completed successfully and are published without
+recomputation. The principal N61-through-N131 sequence remains strictly
+monotonic.
 
-The current phase is a guarded overnight N121/N131/N141/N151 batch. Each case
-uses the validated streaming implementation, permits paging, records the
-actual Python process, and runs cumulative spatial analysis before the
-next case begins.
+The failed N141 attempt was a configuration-cap failure: the historical
+notebook selected its built-in MAX_N_CAP=131 before numerical geometry
+construction. The continuation runner patches that cap only in memory.
 
-See `docs/PROJECT_STATUS.md`, the N111 six-grid analysis, the overnight
-batch plan, and the latest integrated HTML under `article/`.
+The active authorization is N141 through N201 with a hard 2990 GiB
+process-swap ceiling. N201 is the highest +10 ladder point below that
+measured-resource ceiling; N211 is excluded.
+
+See `docs/PROJECT_STATUS.md`, the N121/N131 analysis, the N141-to-N201
+swap-authorization plan, and the latest integrated HTML under `article/`.
 <!-- N301_V1_STATUS_END -->

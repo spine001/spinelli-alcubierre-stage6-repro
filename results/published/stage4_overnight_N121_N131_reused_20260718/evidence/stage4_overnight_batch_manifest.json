@@ -1,0 +1,13 @@
+{
+  "batch_status": "FAILED_N141",
+  "batch_root": "/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625",
+  "requested_cases": [
+    121,
+    131,
+    141
+  ],
+  "completed_cases": [
+    121,
+    131
+  ]
+}

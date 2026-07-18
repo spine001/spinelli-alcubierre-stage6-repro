@@ -1,0 +1,55 @@
+===== STAGE 4 OVERNIGHT N121/N131/N141/N151 BATCH =====
+Started: 2026-07-18T00:46:25-04:00
+Batch root: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625
+Paging is allowed and measured.
+The batch stops on a failed run or nonmonotonic principal trend.
+
+================================================================
+ BEGIN N121
+ Time: 2026-07-18T00:46:25-04:00
+================================================================
+===== STAGE 4 N121 7-GRID ANALYSIS =====
+Grids: [61, 71, 81, 91, 101, 111, 121]
+Principal spatial monotonicity: True
+Resource sampler status: PASS
+Time max RSS: 238.115608 GiB
+Sampled max process VmSwap: 161.242283 GiB
+Sampled max RSS+swap: 397.267956 GiB
+Maximum sampled system swap used: 264.141914 GiB
+Measured runtime: 3124.59 seconds
+Projected N131 peak: 545.792090 GiB
+NEXT_RECOMMENDATION=BUILD_N131_SWAP_ENABLED_RUNNER
+NEXT_RATIONALE=N121 passed and all principal 7-grid trends remain monotonic.
+STAGE4_N121_7_GRID_ANALYSIS_RESULT=PASS
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625/stage4_batch_N121_20260718_004625.zip
+N121_RESULT=PASS
+N121_PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625/stage4_batch_N121_20260718_004625.zip
+Completed: 2026-07-18T01:38:31-04:00
+
+================================================================
+ BEGIN N131
+ Time: 2026-07-18T01:39:01-04:00
+================================================================
+===== STAGE 4 N131 8-GRID ANALYSIS =====
+Grids: [61, 71, 81, 91, 101, 111, 121, 131]
+Principal spatial monotonicity: True
+Resource sampler status: PASS
+Time max RSS: 238.245651 GiB
+Sampled max process VmSwap: 310.103741 GiB
+Sampled max RSS+swap: 543.005581 GiB
+Maximum sampled system swap used: 470.475838 GiB
+Measured runtime: 8934.0 seconds
+Projected N141 peak: 728.778516 GiB
+NEXT_RECOMMENDATION=BUILD_N141_SWAP_ENABLED_RUNNER
+NEXT_RATIONALE=N131 passed and all principal 8-grid trends remain monotonic.
+STAGE4_N131_8_GRID_ANALYSIS_RESULT=PASS
+/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625/stage4_batch_N131_20260718_004625.zip
+N131_RESULT=PASS
+N131_PACKAGE=/home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_overnight_batch_N121_N131_N141_N151_20260718_004625/stage4_batch_N131_20260718_004625.zip
+Completed: 2026-07-18T04:07:55-04:00
+
+================================================================
+ BEGIN N141
+ Time: 2026-07-18T04:08:25-04:00
+================================================================
+ERROR: N141 failed; stopping batch.

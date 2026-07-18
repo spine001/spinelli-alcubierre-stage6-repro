@@ -1,0 +1,13 @@
+===== STAGE 4 N121 7-GRID ANALYSIS =====
+Grids: [61, 71, 81, 91, 101, 111, 121]
+Principal spatial monotonicity: True
+Resource sampler status: PASS
+Time max RSS: 238.115608 GiB
+Sampled max process VmSwap: 161.242283 GiB
+Sampled max RSS+swap: 397.267956 GiB
+Maximum sampled system swap used: 264.141914 GiB
+Measured runtime: 3124.59 seconds
+Projected N131 peak: 545.792090 GiB
+NEXT_RECOMMENDATION=BUILD_N131_SWAP_ENABLED_RUNNER
+NEXT_RATIONALE=N121 passed and all principal 7-grid trends remain monotonic.
+STAGE4_N121_7_GRID_ANALYSIS_RESULT=PASS

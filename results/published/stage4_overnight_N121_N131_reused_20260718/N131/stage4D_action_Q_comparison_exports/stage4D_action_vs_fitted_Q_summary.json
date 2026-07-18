@@ -1,0 +1,13 @@
+{
+  "DIM": 4,
+  "N": 131,
+  "lambda_fit": 0.016623501191294427,
+  "beta_fit": -1.0406792509205383,
+  "beta_action": -1.0,
+  "relative_tensor_difference_action_vs_fit": 0.00032192409883946864,
+  "relative_tensor_difference_percent": 0.032192409883946865,
+  "fitted_normalized_residual": 0.006264808638118429,
+  "action_normalized_residual": 0.006269024207886395,
+  "residual_ratio_action_over_fit": 1.000672896813211,
+  "residual_penalty_percent": 0.06728968132110325
+}

@@ -1,0 +1,2 @@
+DIM,N,lambda_fit,beta_fit,residual_H,residual_HT_lambda_fit,residual_R_beta_fit,residual_HTR_lambda_beta_fit,improvement_HT_over_H,improvement_R_over_H,improvement_HTR_over_H
+4,121,0.016579809465662263,-1.0402591753867252,0.0001175183678314168,0.00011094892353473649,7.137947140896824e-05,6.609903421124558e-05,0.05590142560611755,0.39261008533266917,0.4375429523828447

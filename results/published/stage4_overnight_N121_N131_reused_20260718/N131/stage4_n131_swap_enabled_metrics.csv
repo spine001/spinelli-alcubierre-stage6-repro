@@ -1,0 +1,2 @@
+N,DELTA_TAU,relative_Bianchi_residual,rho_relative_peak_error,Hessian_Q_normalized_residual,HTR_normalized_residual,lambda_fit,beta_fit,action_over_fit,action_fit_tensor_difference_percent,action_residual_penalty_percent,HTR_improvement_over_H
+131,0.04,0.001381367736108725,0.011042409601585942,0.010856747770075727,0.006264808638118429,0.016623501191294427,-1.0406792509205383,1.000672896813211,0.032192409883946865,0.06728968132110325,0.43810774357052196

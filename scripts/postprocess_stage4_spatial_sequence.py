@@ -253,6 +253,16 @@ def main() -> int:
     )
     parser.add_argument("--current-n", type=int, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument(
+        "--max-authorized-n",
+        type=int,
+        default=201,
+    )
+    parser.add_argument(
+        "--max-process-swap-gib",
+        type=float,
+        default=2990.0,
+    )
     args = parser.parse_args()
 
     directories = dict(args.grid)
@@ -357,6 +367,10 @@ def main() -> int:
         projection_basis_gib
         * (next_n / args.current_n) ** 4
     )
+    projected_next_process_swap_gib = max(
+        projected_next_gib - time_peak_gib,
+        0.0,
+    )
 
     if not process_pass:
         recommendation = (
@@ -374,13 +388,33 @@ def main() -> int:
             "At least one principal residual did not continue "
             "its strict monotonic decrease."
         )
+    elif args.current_n >= args.max_authorized_n:
+        recommendation = "SWAP_AUTHORIZATION_CEILING_REACHED"
+        rationale = (
+            f"N{args.current_n} passed and is the maximum "
+            f"authorized ladder point N{args.max_authorized_n}."
+        )
+    elif (
+        projected_next_process_swap_gib
+        > args.max_process_swap_gib
+    ):
+        recommendation = (
+            f"STOP_BEFORE_N{next_n}_SWAP_PROJECTION_EXCEEDS_LIMIT"
+        )
+        rationale = (
+            f"Projected N{next_n} process swap "
+            f"{projected_next_process_swap_gib:.6f} GiB exceeds "
+            f"the authorized {args.max_process_swap_gib:.6f} GiB."
+        )
     else:
         recommendation = (
             f"BUILD_N{next_n}_SWAP_ENABLED_RUNNER"
         )
         rationale = (
-            f"N{args.current_n} passed and all principal "
-            f"{len(grids)}-grid trends remain monotonic."
+            f"N{args.current_n} passed, all principal "
+            f"{len(grids)}-grid trends remain monotonic, and "
+            f"projected N{next_n} process swap remains within "
+            "the authorization ceiling."
         )
 
     marker = (
@@ -414,10 +448,17 @@ def main() -> int:
             f"projected_N{next_n}_peak_gib": (
                 projected_next_gib
             ),
+            f"projected_N{next_n}_process_swap_gib": (
+                projected_next_process_swap_gib
+            ),
         },
         "next_recommendation": recommendation,
         "next_rationale": rationale,
         "execution_policy": "SWAP_ALLOWED_AND_MEASURED",
+        "authorization": {
+            "max_authorized_n": args.max_authorized_n,
+            "max_process_swap_gib": args.max_process_swap_gib,
+        },
         "marker": marker,
     }
 
@@ -484,6 +525,9 @@ def main() -> int:
         f"projected_N{next_n}_peak_gib": (
             projected_next_gib
         ),
+        f"projected_N{next_n}_process_swap_gib": (
+            projected_next_process_swap_gib
+        ),
     }
     with (output / f"{stem}_resources.csv").open(
         "w",
@@ -531,6 +575,14 @@ def main() -> int:
         (
             f"Projected N{next_n} peak: "
             f"{projected_next_gib:.6f} GiB"
+        ),
+        (
+            f"Projected N{next_n} process swap: "
+            f"{projected_next_process_swap_gib:.6f} GiB"
+        ),
+        (
+            "Authorized process-swap ceiling: "
+            f"{args.max_process_swap_gib:.6f} GiB"
         ),
         f"NEXT_RECOMMENDATION={recommendation}",
         f"NEXT_RATIONALE={rationale}",
