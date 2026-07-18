@@ -1,0 +1,139 @@
+{
+  "analysis_status": "PASS",
+  "principal_spatial_monotonic_N61_to_N91": true,
+  "metric_rows": [
+    {
+      "metric": "relative_Bianchi_residual",
+      "N61": 0.006031912101890444,
+      "N71": 0.004538437626932157,
+      "N81": 0.0035299983833249567,
+      "N91": 0.002819880281060446,
+      "N91_vs_N81_percent": -20.11666933387205,
+      "order_N61_N71": 1.845475097237796,
+      "order_N71_N81": 1.881845159297671,
+      "order_N81_N91": 1.90692132519466,
+      "descriptive_four_grid_log_slope": 1.875112722938099
+    },
+    {
+      "metric": "rho_relative_peak_error",
+      "N61": 0.04964638263844123,
+      "N71": 0.037033850908382716,
+      "N81": 0.02858669536805789,
+      "N91": 0.022740302310159808,
+      "N91_vs_N81_percent": -20.45144771938454,
+      "order_N61_N71": 1.9013419021561853,
+      "order_N71_N81": 1.9388022999551673,
+      "order_N81_N91": 1.9425771203443738,
+      "descriptive_four_grid_log_slope": 1.9263678162512945
+    },
+    {
+      "metric": "Hessian_Q_normalized_residual",
+      "N61": 0.018923608329206223,
+      "N71": 0.015545047560557315,
+      "N81": 0.01357449810639878,
+      "N91": 0.01240857338767482,
+      "N91_vs_N81_percent": -8.58908159686849,
+      "order_N61_N71": 1.2758176460076815,
+      "order_N71_N81": 1.0151111820986385,
+      "order_N81_N91": 0.7624634294514835,
+      "descriptive_four_grid_log_slope": 1.0451891004233453
+    },
+    {
+      "metric": "HTR_normalized_residual",
+      "N61": 0.01661441080787198,
+      "N71": 0.012705486513730447,
+      "N81": 0.010241875755526996,
+      "N91": 0.008660663765603933,
+      "N91_vs_N81_percent": -15.438695290457575,
+      "order_N61_N71": 1.7400930757455833,
+      "order_N71_N81": 1.6142206173946372,
+      "order_N81_N91": 1.423748455936666,
+      "descriptive_four_grid_log_slope": 1.611660546723535
+    },
+    {
+      "metric": "lambda_fit",
+      "N61": 0.015789560483007618,
+      "N71": 0.016046992783419523,
+      "N81": 0.016227418581089042,
+      "N91": 0.01635688346979677,
+      "N91_vs_N81_percent": 0.7978156726578977,
+      "order_N61_N71": -0.1049134119175043,
+      "order_N71_N81": -0.08373199627184265,
+      "order_N81_N91": -0.06746726687751224,
+      "descriptive_four_grid_log_slope": null
+    },
+    {
+      "metric": "beta_fit",
+      "N61": -1.0306645653701305,
+      "N71": -1.0342960186715253,
+      "N81": -1.0365130131338942,
+      "N91": -1.0379699273529728,
+      "N91_vs_N81_percent": -0.14055918262652473,
+      "order_N61_N71": null,
+      "order_N71_N81": null,
+      "order_N81_N91": null,
+      "descriptive_four_grid_log_slope": null
+    },
+    {
+      "metric": "action_over_fit",
+      "N61": 1.0000226651967665,
+      "N71": 1.0000040192679722,
+      "N81": 1.0000244510928271,
+      "N91": 1.0000969658236207,
+      "N91_vs_N81_percent": 0.007251295777255415,
+      "order_N61_N71": 0.0001209574945806703,
+      "order_N71_N81": -0.00015300921833743901,
+      "order_N81_N91": -0.0006156262523803007,
+      "descriptive_four_grid_log_slope": null
+    },
+    {
+      "metric": "action_fit_tensor_difference_percent",
+      "N61": 0.027417084419199243,
+      "N71": 0.029452344399313043,
+      "N81": 0.03053278869846761,
+      "N91": 0.031170601271117378,
+      "N91_vs_N81_percent": 2.0889430669062343,
+      "order_N61_N71": -0.4645271435873198,
+      "order_N71_N81": -0.26980646079108667,
+      "order_N81_N91": -0.17552814859824006,
+      "descriptive_four_grid_log_slope": null
+    },
+    {
+      "metric": "action_residual_penalty_percent",
+      "N61": 0.0022665196766524787,
+      "N71": 0.00040192679722217406,
+      "N81": 0.0024451092827115772,
+      "N91": 0.009696582362073158,
+      "N91_vs_N81_percent": 296.570510391251,
+      "order_N61_N71": 11.221038909596812,
+      "order_N71_N81": -13.521727634621326,
+      "order_N81_N91": -11.696792017689072,
+      "descriptive_four_grid_log_slope": null
+    },
+    {
+      "metric": "HTR_improvement_over_H",
+      "N61": 0.42621716618644856,
+      "N71": 0.4301795516876008,
+      "N81": 0.4327826333282817,
+      "N91": 0.43457705785139966,
+      "N91_vs_N81_percent": 0.414624891326639,
+      "order_N61_N71": -0.06003014356596465,
+      "order_N71_N81": -0.04517976402866914,
+      "order_N81_N91": -0.03512965077232398,
+      "descriptive_four_grid_log_slope": null
+    }
+  ],
+  "resource": {
+    "projected_N91_peak_gib": 147.67466083915258,
+    "measured_N91_peak_gib": 148.09243392944336,
+    "N91_memory_projection_error_percent": 0.2829009986661277,
+    "projected_N91_runtime_seconds": 414.04589477349526,
+    "measured_N91_runtime_seconds": 411.15999999999997,
+    "N91_runtime_projection_error_percent": -0.6969987650943937,
+    "projected_N101_peak_from_measured_N91_gib": 224.72572838596125,
+    "swaps": 0,
+    "exit_status": 0
+  },
+  "phase5_recommendation": "FURTHER_OPTIMIZE_BEFORE_N101",
+  "phase5_rationale": "N91 passed, but the measured N91 peak does not provide the required physical-memory margin for N101."
+}

@@ -64,14 +64,13 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-17
 
-The Stage 4 streaming-memory implementation reproduced all six canonical tables at N61
-and N81, used no swap, and reduced peak RSS by approximately 47.6%. The optimized N81
-peak of 92.70 GiB projects N91 at 147.67 GiB.
+Optimized N91 passed with 148.09 GiB peak RSS, zero swap, and monotonic principal
+residuals across N61/N71/N81/N91. The next run is N101.
 
-N91 is now authorized. The optimized N91 runner will extend the spatial sequence to four
-grids, validate the measured resource projection, and issue the N101 decision. N101 is
-not yet authorized because its current projection is approximately 224 GiB.
+Physical RAM is no longer a hard resolution gate. The N101 workflow permits paging,
+records process and system swap continuously, and treats swap use as a performance
+measurement rather than a validation failure.
 
-See `docs/PROJECT_STATUS.md`, the memory-optimization analysis, the N91 run plan, and the
+See `docs/PROJECT_STATUS.md`, the N91/N101 policy analysis, the N101 run plan, and the
 latest self-contained HTML under `article/`.
 <!-- N301_V1_STATUS_END -->

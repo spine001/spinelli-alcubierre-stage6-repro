@@ -1,49 +1,43 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
 **Status date:** 2026-07-17  
-**Current repository baseline before this update:** `5ec5b066adaa77b4da117ab8122e74b51a7f7f9b`  
-**Authoritative notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
+**Repository baseline before this update:** `709cd1a3c25816a3a90730db33ed35595600914f`  
+**Notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
-## Completed evidence
+## Completed
 
-- N61 exact regression: PASS
-- N71 intermediate grid: PASS
-- N81 dense grid: PASS
-- N61/N71/N81 spatial analysis: published
+- N61, N71, N81, and N91 spatial runs: PASS
 - N71 proper-time matrix: PASS
 - N81 proper-time confirmation: PASS
-- Streaming-memory N61 regression: PASS
-- Streaming-memory N81 regression: PASS
+- Streaming-memory N61/N81 regressions: PASS
+- N91 optimized production run and four-grid analysis: PASS
+- N91 evidence publication commit: `709cd1a3c25816a3a90730db33ed35595600914f`
 
-## Memory result
+## N91 measurements
 
-The streaming implementation reduces peak RSS by approximately 47.7% while preserving
-all six canonical tables.
-
-- Optimized N61 peak: 29.643742 GiB
-- Optimized N81 peak: 92.700161 GiB
-- Projected N91 peak: 147.674661 GiB
-- Projected N101 peak: 224.091771 GiB
+- Peak RSS: 148.092434 GiB
+- Runtime: 411.16 seconds
+- Swap: 0
+- Principal spatial monotonicity: PASS
 
 ## Current task
 
-Run the authorized optimized N91 calculation at DELTA_TAU=0.04.
+Publish the complete N91 evidence and execute N101 using the validated streaming
+implementation.
 
-The N91 postprocessor will:
+The N101 workflow permits swap and records:
 
-1. Create the N61/N71/N81/N91 metric sequence.
-2. Compute adjacent-grid effective orders.
-3. Verify that the four principal residuals continue decreasing.
-4. Compare measured N91 memory and runtime with their projections.
-5. Recalculate N101 memory from the measured N91 peak.
-6. Emit the Phase 5 recommendation.
+- maximum process RSS;
+- maximum process VmSwap;
+- minimum system MemAvailable;
+- maximum system swap occupancy;
+- paging activity;
+- runtime and exit status.
 
-## N101 gate
+## Resolution policy
 
-N101 is built only when:
+Insufficient physical RAM alone no longer blocks a run. Optimization and swap-aware
+execution proceed together.
 
-- N91 completes without swap;
-- the principal spatial trends remain valid; and
-- the measured N91 peak projects N101 at no more than 205 GiB.
-
-Otherwise the next step is another focused memory optimization.
+N111 will be considered after N101 based primarily on numerical validity and available
+virtual-memory/storage capacity, not on a physical-RAM-only threshold.

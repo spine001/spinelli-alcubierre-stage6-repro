@@ -1,0 +1,20 @@
+===== STAGE 4 N91 OPTIMIZED PRODUCTION RUN =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+Selected N: 91
+Selected DELTA_TAU: 0.04
+Peak RSS GiB: 148.092433929
+
+===== METRICS =====
+relative_Bianchi_residual: 0.0028198802810604461
+rho_relative_peak_error: 0.022740302310159808
+Hessian_Q_normalized_residual: 0.01240857338767482
+HTR_normalized_residual: 0.0086606637656039334
+lambda_fit: 0.01635688346979677
+beta_fit: -1.0379699273529728
+action_over_fit: 1.0000969658236207
+action_fit_tensor_difference_percent: 0.031170601271117378
+action_residual_penalty_percent: 0.0096965823620731584
+HTR_improvement_over_H: 0.43457705785139966
+
+STAGE4_N91_OPTIMIZED_RUN_RESULT=PASS

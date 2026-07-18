@@ -1,0 +1,29 @@
+===== STAGE 4 OPTIMIZED N91 PREFLIGHT =====
+Generated: 2026-07-17T16:52:55-04:00
+HEAD: 709cd1a3c25816a3a90730db33ed35595600914f
+Notebook target cell hashes: PASS
+
+===== MEMORY =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.6Gi       226Gi       254Mi        14Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+Available RAM GiB: 238
+Swap used: 0.000 GiB of 3000.000 GiB
+Swap occupancy is informational.
+MemAvailable is the hard memory requirement.
+
+===== STORAGE =====
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Free filesystem GiB: 537
+
+===== HEAVY PROCESS CHECK =====
+No matching heavy Python computation detected.
+
+===== RESOURCE PROJECTION =====
+Projected N91 peak RSS: 147.674661 GiB
+Projected N91 runtime: 414.05 seconds
+Required available RAM: 210 GiB
+The process must finish with zero swaps.
+
+PREFLIGHT_RESULT=PASS
