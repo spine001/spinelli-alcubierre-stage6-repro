@@ -474,6 +474,7 @@ def main() -> int:
     output.mkdir(parents=True, exist_ok=True)
     allowed = {
         "stage4_n101_optimized_swap_enabled.run.log",
+        "stage4_n101_resource_samples.csv",
     }
     unexpected = [
         path.name for path in output.iterdir()
