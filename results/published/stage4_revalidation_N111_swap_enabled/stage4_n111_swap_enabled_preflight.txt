@@ -1,0 +1,33 @@
+===== STAGE 4 N111 SWAP-ENABLED PREFLIGHT =====
+Generated: 2026-07-18T00:02:58-04:00
+HEAD: 9d450e09789fb5187c433e74df0edcec1ad2295c
+Notebook target cell hashes: PASS
+
+===== MEMORY AND SWAP =====
+               total        used        free      shared  buff/cache   available
+Mem:           245Gi       6.6Gi       227Gi       308Mi        13Gi       238Gi
+Swap:          2.9Ti          0B       2.9Ti
+NAME                    TYPE  SIZE USED PRIO
+/swap.img               file 1000G   0B   -1
+/swap_stage8_extra.img  file 1000G   0B   20
+/swap_stage8_extra2.img file 1000G   0B   30
+MemAvailable GiB: 238
+SwapFree GiB: 2999
+PAGING_POLICY=ALLOWED
+SWAP_USAGE_IS_NOT_A_FAILURE
+
+===== STORAGE =====
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  3.7T  3.0T  538G  86% /
+Free filesystem GiB: 537
+
+===== HEAVY PROCESS CHECK =====
+No competing heavy Python computation detected.
+
+===== RESOURCE PROJECTION =====
+Projected N111 working set: 328.640039 GiB
+CPU-bound runtime projection: 904.81 seconds
+Notebook selector budget: 512 GiB
+Paging may substantially increase wall time.
+
+PREFLIGHT_RESULT=PASS

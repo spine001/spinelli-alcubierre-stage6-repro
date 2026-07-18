@@ -62,17 +62,16 @@ Then use the scripts in run_scripts/, or call the Python scripts directly.
 https://github.com/spine001/spinelli-alcubierre-stage6-repro
 
 <!-- N301_V1_STATUS_START -->
-## Current validation status — 2026-07-17
+## Current validation status — 2026-07-18
 
-N101 completed successfully with 225.28 GiB peak RSS, zero swap, and
-monotonic principal diagnostics across N61/N71/N81/N91/N101.
+N111 completed successfully with 238.24 GiB peak RSS, 75.53 GiB peak
+process swap, and monotonic principal diagnostics across six grids.
 
-N111 is the next authorized resolution. Its projected working set is
-approximately 328.64 GiB. Paging is allowed and is measured with a corrected
-sampler that tracks the actual Python process, process swap, virtual memory,
-major faults, and system paging counters.
+The current phase is a guarded overnight N121/N131/N141/N151 batch. Each case
+uses the validated streaming implementation, permits paging, records the
+actual Python process, and runs cumulative spatial analysis before the
+next case begins.
 
-See `docs/PROJECT_STATUS.md`, the N101 five-grid analysis, the resource
-sampler correction, the N111 run plan, and the latest integrated HTML under
-`article/`.
+See `docs/PROJECT_STATUS.md`, the N111 six-grid analysis, the overnight
+batch plan, and the latest integrated HTML under `article/`.
 <!-- N301_V1_STATUS_END -->

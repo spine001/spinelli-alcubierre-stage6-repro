@@ -1,45 +1,34 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
-**Status date:** 2026-07-17  
-**Expected repository baseline before this update:** `535de0e739eee30a370a3d9c3a5ac7230b07fdee`  
+**Status date:** 2026-07-18  
+**Expected repository baseline before publication:** `9d450e09789fb5187c433e74df0edcec1ad2295c`  
 **Notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
 ## Completed
 
-- N61/N71/N81/N91/N101 spatial sequence: PASS
-- N71 proper-time matrix: PASS
-- N81 proper-time confirmation: PASS
-- Streaming-memory regressions: PASS
-- N101 five-grid analysis: PASS
-- N101 peak RSS: 225.275547 GiB
-- N101 wall time: 620.23 seconds
-- N101 swap: 0 GiB
+- Spatial sequence N61 through N111: PASS
+- Proper-time validation: PASS
+- Streaming-memory regression: PASS
+- N111 corrected resource sampling: PASS
+- Six-grid principal monotonicity: PASS
 
-## Current task
+## N111 resources
 
-Publish N101 and execute N111 with swap enabled.
+- Peak RSS: 238.242134 GiB
+- Peak process swap: 75.525066 GiB
+- Peak RSS plus process swap: 310.656925 GiB
+- Runtime: 1425.53 seconds
 
-The N111 runner uses the same validated streaming numerical implementation.
-Its notebook memory-budget selector is set to 512 GiB so that the requested
-N111 grid is not reduced before execution.
+## Current phase
 
-## Resource policy
+Publish N111 and run a guarded overnight batch:
 
-Swap and paging are accepted. They are measured rather than treated as
-failures. The only hard execution failures are:
+`N121 → N131 → N141 → N151`
 
-- invalid notebook or script integrity;
-- a competing heavy calculation;
-- insufficient virtual-memory or result-storage capacity;
-- a nonzero process exit;
-- a failed numerical run; or
-- loss of the principal monotonic spatial trend.
+The workflow permits paging, samples the actual Python process, analyzes
+the cumulative spatial sequence after every case, and stops on execution
+failure or loss of principal monotonicity.
 
 ## Next decision
 
-A successful monotonic N111 run produces:
-
-`PHASE7_RECOMMENDATION=BUILD_N121_SWAP_ENABLED_RUNNER`
-
-The current rough N121 working-set projection is 464.056 GiB,
-to be replaced by a projection from the measured N111 footprint.
+N151 is included conditionally and starts only after N141 passes and preserves monotonicity. A successful N151 ten-grid result recommends N161.

@@ -1,0 +1,3163 @@
+{
+  "started_utc": "2026-07-18T04:02:58Z",
+  "notebook_sha256": "1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe",
+  "historical_notebook_modified_on_disk": false,
+  "original_cell_hashes": {
+    "cell3": "5a49221d2ba22d35ee05b94fa968dfc9e1628ccc5d228e08712264db8f5291a5",
+    "cell23": "18dfd79cd2b9fe41b798714d1e2f80f6a53ffab7f0eb39a4abe3d98954326957",
+    "cell24": "6528d7dedf482b7590ebf983c79e21ed9670673a570b319533a4f02367fbf1af"
+  },
+  "patched_cell_hashes": {
+    "cell3": "7e4af8d358a87c6c14077f0f760088b52df5d7ef58cd3ed27e8b401a30d3cb21",
+    "cell23": "c1f6d9a557d67fb3d9b73fc96f4a33493be36f0ef5940085cd741400bb46a06e",
+    "cell24": "e178457c84df25209cd40d8e89b78b930670b67b58fe147a0b0b6fa43451983e"
+  },
+  "target_N": 111,
+  "target_delta_tau": 0.04,
+  "memory_budget_gib": 512.0,
+  "optimization": {
+    "cell23": "stream_candidates_and_release",
+    "cell24": "sequential_fit_action_difference_scoring"
+  },
+  "cells": [
+    {
+      "cell_index": 1,
+      "started_utc": "2026-07-18T04:02:58Z",
+      "current_rss_before_kib": 83988,
+      "max_rss_before_kib": 83060,
+      "status": "PASS",
+      "elapsed_seconds": 0.2357177734375,
+      "current_rss_after_kib": 155636,
+      "max_rss_after_kib": 154712,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 0,
+        "array_count": 0,
+        "largest_arrays": []
+      }
+    },
+    {
+      "cell_index": 3,
+      "started_utc": "2026-07-18T04:02:58Z",
+      "current_rss_before_kib": 155640,
+      "max_rss_before_kib": 154712,
+      "status": "PASS",
+      "elapsed_seconds": 0.015222311019897461,
+      "current_rss_after_kib": 155664,
+      "max_rss_after_kib": 154712,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 0,
+        "array_count": 0,
+        "largest_arrays": []
+      }
+    },
+    {
+      "cell_index": 5,
+      "started_utc": "2026-07-18T04:02:58Z",
+      "current_rss_before_kib": 155668,
+      "max_rss_before_kib": 154712,
+      "status": "PASS",
+      "elapsed_seconds": 0.015526056289672852,
+      "current_rss_after_kib": 155688,
+      "max_rss_after_kib": 154712,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 0,
+        "array_count": 0,
+        "largest_arrays": []
+      }
+    },
+    {
+      "cell_index": 7,
+      "started_utc": "2026-07-18T04:02:58Z",
+      "current_rss_before_kib": 155700,
+      "max_rss_before_kib": 154712,
+      "status": "PASS",
+      "elapsed_seconds": 0.015902280807495117,
+      "current_rss_after_kib": 155832,
+      "max_rss_after_kib": 155224,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 0,
+        "array_count": 0,
+        "largest_arrays": []
+      }
+    },
+    {
+      "cell_index": 9,
+      "started_utc": "2026-07-18T04:02:58Z",
+      "current_rss_before_kib": 155836,
+      "max_rss_before_kib": 155224,
+      "status": "PASS",
+      "elapsed_seconds": 230.21323537826538,
+      "current_rss_after_kib": 169757420,
+      "max_rss_after_kib": 173314500,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 185811818184,
+        "array_count": 12,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 11,
+      "started_utc": "2026-07-18T04:06:49Z",
+      "current_rss_before_kib": 169757428,
+      "max_rss_before_kib": 173314500,
+      "status": "PASS",
+      "elapsed_seconds": 2.055246591567993,
+      "current_rss_after_kib": 169757420,
+      "max_rss_after_kib": 173314500,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 185811818184,
+        "array_count": 12,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 12,
+      "started_utc": "2026-07-18T04:06:51Z",
+      "current_rss_before_kib": 169757428,
+      "max_rss_before_kib": 173314500,
+      "status": "PASS",
+      "elapsed_seconds": 0.7932460308074951,
+      "current_rss_after_kib": 170946652,
+      "max_rss_after_kib": 173316588,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 187026274512,
+        "array_count": 13,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 14,
+      "started_utc": "2026-07-18T04:06:52Z",
+      "current_rss_before_kib": 170946652,
+      "max_rss_before_kib": 173316588,
+      "status": "PASS",
+      "elapsed_seconds": 66.03284645080566,
+      "current_rss_after_kib": 243283396,
+      "max_rss_after_kib": 245632524,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 261108110520,
+        "array_count": 20,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 15,
+      "started_utc": "2026-07-18T04:07:58Z",
+      "current_rss_before_kib": 243283592,
+      "max_rss_before_kib": 245632524,
+      "status": "PASS",
+      "elapsed_seconds": 1.5434112548828125,
+      "current_rss_after_kib": 244471300,
+      "max_rss_after_kib": 246842312,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 262322566848,
+        "array_count": 21,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "C_H_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 17,
+      "started_utc": "2026-07-18T04:07:59Z",
+      "current_rss_before_kib": 244471308,
+      "max_rss_before_kib": 246842312,
+      "status": "PASS",
+      "elapsed_seconds": 38.12365508079529,
+      "current_rss_after_kib": 241831512,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 304123382824,
+        "array_count": 33,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "M",
+            "shape": [
+              486202500,
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 7779240000
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "A",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "B",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "D",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "a",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "b",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "d",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "target",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "C_H_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 18,
+      "started_utc": "2026-07-18T04:08:37Z",
+      "current_rss_before_kib": 241831860,
+      "max_rss_before_kib": 249814984,
+      "status": "PASS",
+      "elapsed_seconds": 375.0593066215515,
+      "current_rss_after_kib": 203873944,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 304123382824,
+        "array_count": 33,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "M",
+            "shape": [
+              486202500,
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 7779240000
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "A",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "B",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "D",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "a",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "b",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "d",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "target",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "C_H_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 19,
+      "started_utc": "2026-07-18T04:14:52Z",
+      "current_rss_before_kib": 203873948,
+      "max_rss_before_kib": 249814984,
+      "status": "PASS",
+      "elapsed_seconds": 0.04158282279968262,
+      "current_rss_after_kib": 203876132,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 304123382824,
+        "array_count": 33,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "M",
+            "shape": [
+              486202500,
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 7779240000
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "A",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "B",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "D",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "a",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "b",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "d",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "target",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "C_H_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 21,
+      "started_utc": "2026-07-18T04:14:52Z",
+      "current_rss_before_kib": 203876136,
+      "max_rss_before_kib": 249814984,
+      "status": "PASS",
+      "elapsed_seconds": 0.018158912658691406,
+      "current_rss_after_kib": 203876236,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 304123382824,
+        "array_count": 33,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Q_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "Qmix_H",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "M",
+            "shape": [
+              486202500,
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 7779240000
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "C_H",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "A",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "B",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "D",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "a",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "b",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "d",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "target",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "divG_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "C_H_mag",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 23,
+      "started_utc": "2026-07-18T04:14:52Z",
+      "current_rss_before_kib": 203876324,
+      "max_rss_before_kib": 249814984,
+      "status": "PASS",
+      "elapsed_seconds": 577.473087310791,
+      "current_rss_after_kib": 184159960,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 220063147456,
+        "array_count": 29,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "Q00_slice",
+            "shape": [
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 98568
+          },
+          {
+            "name": "rho_slice",
+            "shape": [
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 98568
+          },
+          {
+            "name": "Qbest_slice",
+            "shape": [
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 98568
+          },
+          {
+            "name": "_",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "xs",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "rho_cut",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "Q_cut",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "rho_norm",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "Q_norm",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "params",
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 16
+          },
+          {
+            "name": "svals",
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 16
+          },
+          {
+            "name": "residuals",
+            "shape": [
+              1
+            ],
+            "dtype": "float64",
+            "nbytes": 8
+          }
+        ]
+      }
+    },
+    {
+      "cell_index": 24,
+      "started_utc": "2026-07-18T04:24:30Z",
+      "current_rss_before_kib": 184160008,
+      "max_rss_before_kib": 249814984,
+      "status": "PASS",
+      "elapsed_seconds": 130.6425805091858,
+      "current_rss_after_kib": 184166744,
+      "max_rss_after_kib": 249814984,
+      "array_inventory_after": {
+        "total_unique_array_bytes": 220063047112,
+        "array_count": 26,
+        "largest_arrays": [
+          {
+            "name": "geom.Gamma",
+            "shape": [
+              4,
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 77725204992
+          },
+          {
+            "name": "geom.g",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.gi",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Ricci",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Einstein",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.Gmix",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "aux_H.Hess",
+            "shape": [
+              4,
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 19431301248
+          },
+          {
+            "name": "geom.divG",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.dS",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "aux_H.gradS_up",
+            "shape": [
+              4,
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 4857825312
+          },
+          {
+            "name": "res_fit",
+            "shape": [
+              486202500
+            ],
+            "dtype": "float64",
+            "nbytes": 3889620000
+          },
+          {
+            "name": "geom.f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.D2f",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.S",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.R_scalar",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "geom.rho_A",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "aux_H.BoxS",
+            "shape": [
+              111,
+              111,
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 1214456328
+          },
+          {
+            "name": "Q00_slice",
+            "shape": [
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 98568
+          },
+          {
+            "name": "Qbest_slice",
+            "shape": [
+              111,
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 98568
+          },
+          {
+            "name": "_",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "xs",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "Q_cut",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "Q_norm",
+            "shape": [
+              111
+            ],
+            "dtype": "float64",
+            "nbytes": 888
+          },
+          {
+            "name": "params",
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 16
+          },
+          {
+            "name": "svals",
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "nbytes": 16
+          },
+          {
+            "name": "residuals",
+            "shape": [
+              1
+            ],
+            "dtype": "float64",
+            "nbytes": 8
+          }
+        ]
+      }
+    }
+  ],
+  "selected_configuration": {
+    "DIM": 4,
+    "N": 111,
+    "N_REQUESTED": 111,
+    "MANUAL_MEMORY_BUDGET_GIB": 512.0,
+    "DELTA_TAU": 0.04
+  },
+  "metrics": {
+    "relative_Bianchi_residual": 0.0019139352284350659,
+    "rho_relative_peak_error": 0.015352091640846053,
+    "Hessian_Q_normalized_residual": 0.01128348028902871,
+    "HTR_normalized_residual": 0.006974356346946944,
+    "lambda_fit": 0.016524255632360423,
+    "beta_fit": -1.0397122617163324,
+    "action_over_fit": 1.0003650520538028,
+    "action_fit_tensor_difference_percent": 0.03185323434067878,
+    "action_residual_penalty_percent": 0.03650520538027724,
+    "HTR_improvement_over_H": 0.43681737772838947
+  },
+  "comparison_status": "NOT_APPLICABLE_PRODUCTION",
+  "finished_utc": "2026-07-18T04:26:41Z",
+  "max_rss_kib": 249814984,
+  "current_rss_final_kib": 184166784,
+  "run_status": "PASS"
+}

@@ -1,0 +1,14 @@
+===== STAGE 4 N111 SIX-GRID ANALYSIS =====
+Principal spatial monotonicity: True
+Resource sampler status: PASS
+Time max RSS: 238.242134 GiB
+Sampled max process VmSwap: 75.525066 GiB
+Sampled max RSS+swap: 310.656925 GiB
+Maximum sampled system swap used: 122.655338 GiB
+Kernel pswpin delta pages: 19393505
+Kernel pswpout delta pages: 35857605
+Measured runtime: 1425.53 seconds
+Projected N121 peak: 438.662597 GiB
+PHASE7_RECOMMENDATION=BUILD_N121_SWAP_ENABLED_RUNNER
+PHASE7_RATIONALE=N111 passed and the principal six-grid trends remain monotonic; paging remains an accepted resource.
+STAGE4_N111_SIX_GRID_ANALYSIS_RESULT=PASS
