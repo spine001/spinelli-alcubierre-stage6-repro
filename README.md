@@ -64,13 +64,15 @@ https://github.com/spine001/spinelli-alcubierre-stage6-repro
 <!-- N301_V1_STATUS_START -->
 ## Current validation status — 2026-07-17
 
-Optimized N91 passed with 148.09 GiB peak RSS, zero swap, and monotonic principal
-residuals across N61/N71/N81/N91. The next run is N101.
+N101 completed successfully with 225.28 GiB peak RSS, zero swap, and
+monotonic principal diagnostics across N61/N71/N81/N91/N101.
 
-Physical RAM is no longer a hard resolution gate. The N101 workflow permits paging,
-records process and system swap continuously, and treats swap use as a performance
-measurement rather than a validation failure.
+N111 is the next authorized resolution. Its projected working set is
+approximately 328.64 GiB. Paging is allowed and is measured with a corrected
+sampler that tracks the actual Python process, process swap, virtual memory,
+major faults, and system paging counters.
 
-See `docs/PROJECT_STATUS.md`, the N91/N101 policy analysis, the N101 run plan, and the
-latest self-contained HTML under `article/`.
+See `docs/PROJECT_STATUS.md`, the N101 five-grid analysis, the resource
+sampler correction, the N111 run plan, and the latest integrated HTML under
+`article/`.
 <!-- N301_V1_STATUS_END -->

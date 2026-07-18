@@ -1,0 +1,10 @@
+===== STAGE 4 N101 FIVE-GRID ANALYSIS =====
+Principal spatial monotonicity: True
+Measured N101 peak RSS: 225.275547 GiB
+Measured N101 runtime: 620.23 seconds
+Maximum sampled process VmSwap: 0.000000 GiB
+Maximum sampled system swap used: 0.000000 GiB
+Projected N111 peak: 328.640039 GiB
+PHASE6_RECOMMENDATION=BUILD_N111_SWAP_ENABLED_RUNNER
+PHASE6_RATIONALE=N101 passed and the principal five-grid trends remain monotonic; physical RAM is not a hard gate.
+STAGE4_N101_FIVE_GRID_ANALYSIS_RESULT=PASS

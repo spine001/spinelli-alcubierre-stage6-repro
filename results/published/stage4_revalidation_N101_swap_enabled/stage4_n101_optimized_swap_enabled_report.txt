@@ -1,0 +1,20 @@
+===== STAGE 4 N101 OPTIMIZED SWAP-ENABLED PRODUCTION RUN =====
+Notebook SHA256: 1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe
+Historical notebook modified on disk: NO
+Selected N: 101
+Selected DELTA_TAU: 0.04
+Peak RSS GiB: 225.275547028
+
+===== METRICS =====
+relative_Bianchi_residual: 0.0023022521480045872
+rho_relative_peak_error: 0.018509149568745848
+Hessian_Q_normalized_residual: 0.011709149847087459
+HTR_normalized_residual: 0.0076377563124869008
+lambda_fit: 0.016452255371338965
+beta_fit: -1.0389808711441213
+action_over_fit: 1.0002164129107358
+action_fit_tensor_difference_percent: 0.031577638371468597
+action_residual_penalty_percent: 0.021641291073581925
+HTR_improvement_over_H: 0.43586397601615301
+
+STAGE4_N101_SWAP_ENABLED_RUN_RESULT=PASS

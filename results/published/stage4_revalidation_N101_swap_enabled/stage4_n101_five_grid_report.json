@@ -1,0 +1,153 @@
+{
+  "analysis_status": "PASS",
+  "principal_spatial_monotonic_N61_to_N101": true,
+  "metric_rows": [
+    {
+      "metric": "relative_Bianchi_residual",
+      "N61": 0.006031912101890444,
+      "N71": 0.004538437626932157,
+      "N81": 0.0035299983833249567,
+      "N91": 0.002819880281060446,
+      "N101": 0.002302252148004587,
+      "order_N61_N71": 1.845475097237796,
+      "order_N71_N81": 1.881845159297671,
+      "order_N81_N91": 1.90692132519466,
+      "order_N91_N101": 1.9248823018444912,
+      "descriptive_five_grid_log_slope": 1.8859169686509916
+    },
+    {
+      "metric": "rho_relative_peak_error",
+      "N61": 0.04964638263844123,
+      "N71": 0.037033850908382716,
+      "N81": 0.02858669536805789,
+      "N91": 0.022740302310159808,
+      "N101": 0.018509149568745848,
+      "order_N61_N71": 1.9013419021561853,
+      "order_N71_N81": 1.9388022999551673,
+      "order_N81_N91": 1.9425771203443738,
+      "order_N91_N101": 1.9539919678937006,
+      "descriptive_five_grid_log_slope": 1.9325444182158986
+    },
+    {
+      "metric": "Hessian_Q_normalized_residual",
+      "N61": 0.018923608329206223,
+      "N71": 0.015545047560557315,
+      "N81": 0.01357449810639878,
+      "N91": 0.01240857338767482,
+      "N101": 0.01170914984708746,
+      "order_N61_N71": 1.2758176460076815,
+      "order_N71_N81": 1.0151111820986385,
+      "order_N81_N91": 0.7624634294514835,
+      "order_N91_N101": 0.550652786657553,
+      "descriptive_five_grid_log_slope": 0.9421510870917849
+    },
+    {
+      "metric": "HTR_normalized_residual",
+      "N61": 0.01661441080787198,
+      "N71": 0.012705486513730447,
+      "N81": 0.010241875755526996,
+      "N91": 0.008660663765603933,
+      "N101": 0.007637756312486901,
+      "order_N61_N71": 1.7400930757455833,
+      "order_N71_N81": 1.6142206173946372,
+      "order_N81_N91": 1.423748455936666,
+      "order_N91_N101": 1.192927753624865,
+      "descriptive_five_grid_log_slope": 1.5300564241939316
+    },
+    {
+      "metric": "lambda_fit",
+      "N61": 0.015789560483007618,
+      "N71": 0.016046992783419523,
+      "N81": 0.016227418581089042,
+      "N91": 0.01635688346979677,
+      "N101": 0.016452255371338965,
+      "order_N61_N71": -0.1049134119175043,
+      "order_N71_N81": -0.08373199627184265,
+      "order_N81_N91": -0.06746726687751224,
+      "order_N91_N101": -0.05517965004445098,
+      "descriptive_five_grid_log_slope": null
+    },
+    {
+      "metric": "beta_fit",
+      "N61": -1.0306645653701305,
+      "N71": -1.0342960186715253,
+      "N81": -1.0365130131338942,
+      "N91": -1.0379699273529728,
+      "N101": -1.0389808711441213,
+      "order_N61_N71": null,
+      "order_N71_N81": null,
+      "order_N81_N91": null,
+      "order_N91_N101": null,
+      "descriptive_five_grid_log_slope": null
+    },
+    {
+      "metric": "action_over_fit",
+      "N61": 1.0000226651967665,
+      "N71": 1.0000040192679722,
+      "N81": 1.0000244510928271,
+      "N91": 1.0000969658236207,
+      "N101": 1.0002164129107358,
+      "order_N61_N71": 0.0001209574945806703,
+      "order_N71_N81": -0.00015300921833743901,
+      "order_N81_N91": -0.0006156262523803007,
+      "order_N91_N101": -0.0011335211616514066,
+      "descriptive_five_grid_log_slope": null
+    },
+    {
+      "metric": "action_fit_tensor_difference_percent",
+      "N61": 0.027417084419199243,
+      "N71": 0.029452344399313043,
+      "N81": 0.03053278869846761,
+      "N91": 0.031170601271117378,
+      "N101": 0.0315776383714686,
+      "order_N61_N71": -0.4645271435873198,
+      "order_N71_N81": -0.26980646079108667,
+      "order_N81_N91": -0.17552814859824006,
+      "order_N91_N101": -0.12313758990169417,
+      "descriptive_five_grid_log_slope": null
+    },
+    {
+      "metric": "action_residual_penalty_percent",
+      "N61": 0.0022665196766524787,
+      "N71": 0.00040192679722217406,
+      "N81": 0.0024451092827115772,
+      "N91": 0.009696582362073158,
+      "N101": 0.021641291073581925,
+      "order_N61_N71": 11.221038909596812,
+      "order_N71_N81": -13.521727634621326,
+      "order_N81_N91": -11.696792017689072,
+      "order_N91_N101": -7.619833853400527,
+      "descriptive_five_grid_log_slope": null
+    },
+    {
+      "metric": "HTR_improvement_over_H",
+      "N61": 0.42621716618644856,
+      "N71": 0.4301795516876008,
+      "N81": 0.4327826333282817,
+      "N91": 0.43457705785139966,
+      "N101": 0.435863976016153,
+      "order_N61_N71": -0.06003014356596465,
+      "order_N71_N81": -0.04517976402866914,
+      "order_N81_N91": -0.03512965077232398,
+      "order_N91_N101": -0.02806493233380314,
+      "descriptive_five_grid_log_slope": null
+    }
+  ],
+  "resource": {
+    "measured_N101_peak_rss_gib": 225.2755470275879,
+    "measured_N101_runtime_seconds": 620.23,
+    "time_swaps": 0,
+    "exit_status": 0,
+    "resource_samples": {
+      "sample_count": 124,
+      "max_vmrss_gib": 0.00156402587890625,
+      "max_vmswap_gib": 0.0,
+      "min_memavailable_gib": 14.321029663085938,
+      "max_system_swap_used_gib": 0.0
+    },
+    "projected_N111_peak_from_measured_N101_gib": 328.6400386244377
+  },
+  "phase6_recommendation": "BUILD_N111_SWAP_ENABLED_RUNNER",
+  "phase6_rationale": "N101 passed and the principal five-grid trends remain monotonic; physical RAM is not a hard gate.",
+  "execution_policy": "SWAP_ALLOWED_AND_MEASURED"
+}

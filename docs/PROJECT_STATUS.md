@@ -1,43 +1,45 @@
 # Spinelli Framework / Alcubierre Validation — Project Status
 
 **Status date:** 2026-07-17  
-**Repository baseline before this update:** `709cd1a3c25816a3a90730db33ed35595600914f`  
+**Expected repository baseline before this update:** `535de0e739eee30a370a3d9c3a5ac7230b07fdee`  
 **Notebook SHA-256:** `1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe`
 
 ## Completed
 
-- N61, N71, N81, and N91 spatial runs: PASS
+- N61/N71/N81/N91/N101 spatial sequence: PASS
 - N71 proper-time matrix: PASS
 - N81 proper-time confirmation: PASS
-- Streaming-memory N61/N81 regressions: PASS
-- N91 optimized production run and four-grid analysis: PASS
-- N91 evidence publication commit: `709cd1a3c25816a3a90730db33ed35595600914f`
-
-## N91 measurements
-
-- Peak RSS: 148.092434 GiB
-- Runtime: 411.16 seconds
-- Swap: 0
-- Principal spatial monotonicity: PASS
+- Streaming-memory regressions: PASS
+- N101 five-grid analysis: PASS
+- N101 peak RSS: 225.275547 GiB
+- N101 wall time: 620.23 seconds
+- N101 swap: 0 GiB
 
 ## Current task
 
-Publish the complete N91 evidence and execute N101 using the validated streaming
-implementation.
+Publish N101 and execute N111 with swap enabled.
 
-The N101 workflow permits swap and records:
+The N111 runner uses the same validated streaming numerical implementation.
+Its notebook memory-budget selector is set to 512 GiB so that the requested
+N111 grid is not reduced before execution.
 
-- maximum process RSS;
-- maximum process VmSwap;
-- minimum system MemAvailable;
-- maximum system swap occupancy;
-- paging activity;
-- runtime and exit status.
+## Resource policy
 
-## Resolution policy
+Swap and paging are accepted. They are measured rather than treated as
+failures. The only hard execution failures are:
 
-Insufficient physical RAM alone no longer blocks a run. Optimization and swap-aware
-execution proceed together.
+- invalid notebook or script integrity;
+- a competing heavy calculation;
+- insufficient virtual-memory or result-storage capacity;
+- a nonzero process exit;
+- a failed numerical run; or
+- loss of the principal monotonic spatial trend.
 
-N111 will be considered after N101 based primarily on numerical validity and available
-virtual-memory/storage capacity, not on a physical-RAM-only threshold.
+## Next decision
+
+A successful monotonic N111 run produces:
+
+`PHASE7_RECOMMENDATION=BUILD_N121_SWAP_ENABLED_RUNNER`
+
+The current rough N121 working-set projection is 464.056 GiB,
+to be replaced by a projection from the measured N111 footprint.
