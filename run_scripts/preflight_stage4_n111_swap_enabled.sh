@@ -114,18 +114,7 @@ PY
   echo "===== HEAVY PROCESS CHECK ====="
   MATCHES="$(
     ps -eo pid=,comm=,args= |
-    awk '
-      $2 ~ /^python/ &&
-      (
-        index($0, "run_stage4_n111_optimized_swap_enabled.py") ||
-        index($0, "run_stage4_n101_optimized_swap_enabled.py") ||
-        index($0, "run_stage4_n91_optimized.py") ||
-        index($0, "stage6_alcubierre") ||
-        index($0, "run_stage6E")
-      ) {
-        print
-      }
-    '
+    awk '$2 ~ /^python/ && $0 ~ /(run_stage4_n111_optimized_swap_enabled[.]py|run_stage4_n101_optimized_swap_enabled[.]py|run_stage4_n91_optimized[.]py|stage6_alcubierre|run_stage6E)/ { print }'
   )"
   if [[ -n "$MATCHES" ]]; then
     echo "$MATCHES"
