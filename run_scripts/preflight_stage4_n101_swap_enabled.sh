@@ -15,7 +15,7 @@ REPORT="$REPO/reports/stage4_n101_swap_enabled_preflight_${TS}.txt"
  echo "HEAD: $(git rev-parse HEAD)"
  [[ -x "$PYTHON" ]] || { echo "ERROR: venv Python missing"; exit 1; }
  [[ "$(sha256sum "$NOTEBOOK"|awk '{print $1}')" == "1e605096b1334c1998331c4fefdc1017b2d783120f8079e4d836f40af4680afe" ]] || { echo "ERROR: notebook SHA mismatch"; exit 1; }
- [[ "$(sha256sum scripts/run_stage4_n101_optimized_swap_enabled.py|awk '{print $1}')" == "e18f31d9ad65616cca8e3e56dbf8dec07540815a85a5c02ee4a566746d99c478" ]] || { echo "ERROR: runner SHA mismatch"; exit 1; }
+ [[ "$(sha256sum scripts/run_stage4_n101_optimized_swap_enabled.py|awk '{print $1}')" == "e6f4487391fe183eefa52bd89cc917a6992c3622038c0ce2d0ba76450bde1bc2" ]] || { echo "ERROR: runner SHA mismatch"; exit 1; }
  [[ "$(sha256sum scripts/postprocess_stage4_n101_five_grid_analysis.py|awk '{print $1}')" == "11b5f4a599a7b00bf1bc8bc7fbb8add3585bc24472154a157b935e8731c1671a" ]] || { echo "ERROR: postprocessor SHA mismatch"; exit 1; }
  grep -q '^STAGE4_N91_OPTIMIZED_RUN_RESULT=PASS$' "$N91/stage4_n91_optimized_report.txt" || { echo "ERROR: N91 run PASS missing"; exit 1; }
  grep -q '^STAGE4_N91_OPTIMIZED_ANALYSIS_RESULT=PASS$' "$N91/stage4_n91_four_grid_report.txt" || { echo "ERROR: N91 analysis PASS missing"; exit 1; }
