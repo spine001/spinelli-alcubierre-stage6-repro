@@ -1,0 +1,257 @@
+===== STAGE 4 N201 PARTIAL-RUN FORENSIC SUMMARY V2 =====
+Generated: 2026-07-27T13:50:37.485909-04:00
+Batch root: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_resume_N181_N201_20260721_140641
+CSV: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_resume_N181_N201_20260721_140641/N201/stage4_n201_resource_samples.csv
+Run log: /home/julio/spinelli-framework/repro/spinelli-alcubierre-stage6-repro/results/stage4_resume_N181_N201_20260721_140641/N201/stage4_n201_swap_enabled.run.log
+CSV size bytes: 2897556
+Run-log size bytes: 1191
+CSV SHA-256: 9065a88b816e1d11734f3e31f8693e20cb41216ca2d576d497000d4b5beacc3d
+Run-log SHA-256: 8c5ce5d8297c86f4e61fe91ff3af723caa29b6ebc6e4a648bfc076ab9dd83d36
+
+===== CSV STRUCTURE =====
+Original header count: 14
+Maximum row width: 14
+Sample count: 19647
+Irregular row count: 1
+First irregular CSV line numbers: 19648
+HEADER_01=timestamp
+HEADER_02=pid
+HEADER_03=comm
+HEADER_04=state
+HEADER_05=vmrss_kib
+HEADER_06=vmswap_kib
+HEADER_07=vmsize_kib
+HEADER_08=vmhwm_kib
+HEADER_09=vmpeak_kib
+HEADER_10=majflt
+HEADER_11=memavailable_kib
+HEADER_12=system_swap_used_kib
+HEADER_13=pswpin_pages
+HEADER_14=pswpout_pages
+
+===== RUN TIMING =====
+Timestamp column: timestamp
+First sample: 2026-07-26T05:17:31-04:00
+Last sample: 2026-07-27T08:47:34-04:00
+Observed duration seconds: 99003.000
+Observed duration hours: 27.500833
+Median sample interval seconds: 5.000000
+Maximum sample interval seconds: 33.000000
+
+===== NUMERIC COLUMN SUMMARIES =====
+
+COLUMN=pid
+  NUMERIC_SAMPLES=19646
+  FIRST=3417995
+  LAST=3417995
+  MIN=3417995
+  MIN_ROW=1
+  MAX=3417995
+  MAX_ROW=1
+  LAST_MINUS_FIRST=0
+  EARLY_WINDOW_MEAN=3417995
+  LATE_WINDOW_MEAN=3417995
+  LATE_MINUS_EARLY_MEAN=0
+
+COLUMN=vmrss_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=11684
+  LAST=238752628
+  MIN=11684
+  MIN_ROW=1
+  MAX=251443824
+  MAX_ROW=24
+  LAST_MINUS_FIRST=238740944
+  EARLY_WINDOW_MEAN=232015960.4
+  LATE_WINDOW_MEAN=238881821.08
+  LATE_MINUS_EARLY_MEAN=6865860.68
+
+COLUMN=vmswap_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=0
+  LAST=2876141672
+  MIN=0
+  MIN_ROW=1
+  MAX=2893702908
+  MAX_ROW=19418
+  LAST_MINUS_FIRST=2876141672
+  EARLY_WINDOW_MEAN=62269693.12
+  LATE_WINDOW_MEAN=2873439156.16
+  LATE_MINUS_EARLY_MEAN=2811169463.04
+
+COLUMN=vmsize_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=21248
+  LAST=3698443128
+  MIN=21248
+  MIN_ROW=1
+  MAX=3711068128
+  MAX_ROW=17636
+  LAST_MINUS_FIRST=3698421880
+  EARLY_WINDOW_MEAN=685499757.08
+  LATE_WINDOW_MEAN=3698443128
+  LATE_MINUS_EARLY_MEAN=3012943370.92
+
+COLUMN=vmhwm_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=12940
+  LAST=251492048
+  MIN=12940
+  MIN_ROW=1
+  MAX=251492048
+  MAX_ROW=26
+  LAST_MINUS_FIRST=251479108
+  EARLY_WINDOW_MEAN=235635812.6
+  LATE_WINDOW_MEAN=251492048
+  LATE_MINUS_EARLY_MEAN=15856235.4
+
+COLUMN=vmpeak_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=22488
+  LAST=3711068128
+  MIN=22488
+  MIN_ROW=1
+  MAX=3711068128
+  MAX_ROW=17636
+  LAST_MINUS_FIRST=3711045640
+  EARLY_WINDOW_MEAN=686392401.36
+  LATE_WINDOW_MEAN=3711068128
+  LATE_MINUS_EARLY_MEAN=3024675726.64
+
+COLUMN=majflt
+  NUMERIC_SAMPLES=19646
+  FIRST=2
+  LAST=511743170
+  MIN=2
+  MIN_ROW=1
+  MAX=511743170
+  MAX_ROW=19646
+  LAST_MINUS_FIRST=511743168
+  EARLY_WINDOW_MEAN=563043.11
+  LATE_WINDOW_MEAN=511599100.66
+  LATE_MINUS_EARLY_MEAN=511036057.55
+
+COLUMN=memavailable_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=251999172
+  LAST=376192
+  MIN=0
+  MIN_ROW=29
+  MAX=251999172
+  MAX_ROW=1
+  LAST_MINUS_FIRST=-251622980
+  EARLY_WINDOW_MEAN=19127262.84
+  LATE_WINDOW_MEAN=242281.16
+  LATE_MINUS_EARLY_MEAN=-18884981.68
+
+COLUMN=system_swap_used_kib
+  NUMERIC_SAMPLES=19646
+  FIRST=1113524
+  LAST=2877128980
+  MIN=1113524
+  MIN_ROW=1
+  MAX=2894733560
+  MAX_ROW=19418
+  LAST_MINUS_FIRST=2876015456
+  EARLY_WINDOW_MEAN=75871002.72
+  LATE_WINDOW_MEAN=2874426811
+  LATE_MINUS_EARLY_MEAN=2798555808.28
+
+COLUMN=pswpin_pages
+  NUMERIC_SAMPLES=19646
+  FIRST=22506435012
+  LAST=25815415116
+  MIN=22506435012
+  MIN_ROW=1
+  MAX=25815415116
+  MAX_ROW=19646
+  LAST_MINUS_FIRST=3308980104
+  EARLY_WINDOW_MEAN=22510858454.8
+  LATE_WINDOW_MEAN=25814791563.5
+  LATE_MINUS_EARLY_MEAN=3303933108.74
+
+COLUMN=pswpout_pages
+  NUMERIC_SAMPLES=19646
+  FIRST=16065312129
+  LAST=18351275901
+  MIN=16065312129
+  MIN_ROW=1
+  MAX=18351275901
+  MAX_ROW=19646
+  LAST_MINUS_FIRST=2285963772
+  EARLY_WINDOW_MEAN=16084002523.2
+  LATE_WINDOW_MEAN=18350014658.4
+  LATE_MINUS_EARLY_MEAN=2266012135.22
+
+===== LIKELY RESOURCE COLUMNS =====
+RESOURCE=vmrss_kib | first=11684 | last=238752628 | peak=251443824 | peak_row=24
+RESOURCE=vmswap_kib | first=0 | last=2876141672 | peak=2893702908 | peak_row=19418
+RESOURCE=vmsize_kib | first=21248 | last=3698443128 | peak=3711068128 | peak_row=17636
+RESOURCE=memavailable_kib | first=251999172 | last=376192 | peak=251999172 | peak_row=1
+RESOURCE=system_swap_used_kib | first=1113524 | last=2877128980 | peak=2894733560 | peak_row=19418
+RESOURCE=pswpin_pages | first=22506435012 | last=25815415116 | peak=25815415116 | peak_row=19646
+RESOURCE=pswpout_pages | first=16065312129 | last=18351275901 | peak=18351275901 | peak_row=19646
+
+===== FINAL TEN CSV SAMPLES =====
+ROW_19638: timestamp=2026-07-27T08:46:53-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238857228 | vmswap_kib=2875771356 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511726432 | memavailable_kib=262828 | system_swap_used_kib=2876758704 | pswpin_pages=25815352258 | pswpout_pages=18351072174
+ROW_19639: timestamp=2026-07-27T08:46:58-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238878576 | vmswap_kib=2875798636 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511729500 | memavailable_kib=237196 | system_swap_used_kib=2876785976 | pswpin_pages=25815363501 | pswpout_pages=18351098746
+ROW_19640: timestamp=2026-07-27T08:47:03-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238858764 | vmswap_kib=2875845072 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511731166 | memavailable_kib=271176 | system_swap_used_kib=2876832408 | pswpin_pages=25815369415 | pswpout_pages=18351121296
+ROW_19641: timestamp=2026-07-27T08:47:08-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238822008 | vmswap_kib=2875912956 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511733139 | memavailable_kib=297844 | system_swap_used_kib=2876900160 | pswpin_pages=25815377008 | pswpout_pages=18351149682
+ROW_19642: timestamp=2026-07-27T08:47:13-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238832044 | vmswap_kib=2875941564 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511735585 | memavailable_kib=285428 | system_swap_used_kib=2876928892 | pswpin_pages=25815386398 | pswpout_pages=18351174911
+ROW_19643: timestamp=2026-07-27T08:47:18-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238811404 | vmswap_kib=2875991444 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511737434 | memavailable_kib=310516 | system_swap_used_kib=2876978764 | pswpin_pages=25815393579 | pswpout_pages=18351199092
+ROW_19644: timestamp=2026-07-27T08:47:23-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238799612 | vmswap_kib=2876033248 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511739332 | memavailable_kib=333468 | system_swap_used_kib=2877020564 | pswpin_pages=25815400925 | pswpout_pages=18351223913
+ROW_19645: timestamp=2026-07-27T08:47:29-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238750596 | vmswap_kib=2876107316 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511740851 | memavailable_kib=368840 | system_swap_used_kib=2877094628 | pswpin_pages=25815406540 | pswpout_pages=18351252736
+ROW_19646: timestamp=2026-07-27T08:47:34-04:00 | pid=3417995 | comm=python | state=D | vmrss_kib=238752628 | vmswap_kib=2876141672 | vmsize_kib=3698443128 | vmhwm_kib=251492048 | vmpeak_kib=3711068128 | majflt=511743170 | memavailable_kib=376192 | system_swap_used_kib=2877128980 | pswpin_pages=25815415116 | pswpout_pages=18351275901
+ROW_19647: timestamp=                                                                                                                                                     | pid= | comm= | state= | vmrss_kib= | vmswap_kib= | vmsize_kib= | vmhwm_kib= | vmpeak_kib= | majflt= | memavailable_kib= | system_swap_used_kib= | pswpin_pages= | pswpout_pages=
+
+FORENSIC_RESULT=PARTIAL_N201_DATA_ANALYZED
+
+===== COMPLETE N201 RUN LOG =====
+
+===== EXECUTE NOTEBOOK CELL 0001 =====
+NumPy: 2.5.1
+Pandas: 3.0.3
+SciPy available: True
+
+===== EXECUTE NOTEBOOK CELL 0003 =====
+DIM = 4
+Requested N cap = 201
+Manual memory budget = 4096.0 GiB
+Estimated scalar fields = 260
+Largest RAM-safe N selected = 201
+Estimated full-run footprint at N=201: 3161.90 GiB
+Estimated full-run footprint at requested N=201: 3161.90 GiB
+
+===== EXECUTE NOTEBOOK CELL 0005 =====
+
+===== EXECUTE NOTEBOOK CELL 0007 =====
+
+===== EXECUTE NOTEBOOK CELL 0009 =====
+Building geometry with dim=4, N=201
+Estimated full-run footprint: 3161.90 GiB
+Built geometry: 4 201 (201, 201, 201, 201)
+
+===== EXECUTE NOTEBOOK CELL 0011 =====
+||G^a_b||_2 = 0.06935114732217389
+||nabla_a G^a_b||_2 = 4.095947377151413e-05
+relative Bianchi residual = 0.0005906098940401815
+
+===== EXECUTE NOTEBOOK CELL 0012 =====
+
+===== EXECUTE NOTEBOOK CELL 0014 =====
+Hessian Q ||Q||: 0.021547874549337185
+Hessian Q ||div Q||: 0.00022831464822995205
+C/Q: 0.010595692290076704
+
+===== EXECUTE NOTEBOOK CELL 0015 =====
+
+===== EXECUTE NOTEBOOK CELL 0017 =====
+lambda_fit = 0.016771457241007384
+beta_fit = -1.0420424552215788
+fit residual ratio = 0.5600145492837062
+
+===== EXECUTE NOTEBOOK CELL 0018 =====
+
+===== END N201 RUN LOG =====
+N201_ACCEPTANCE_STATUS=INCOMPLETE_NOT_ACCEPTED
+N201_RESTART_STATUS=PROHIBITED_BY_USER_DECISION
